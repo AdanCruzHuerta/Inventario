@@ -15,7 +15,9 @@ Route::group(['middleware' => 'administrador'], function () {
     	post('/administrador/empleado', 'EmpleadoController@store');
     get('/administrador/departamento', 'DepartamentoController@index');
     	post('/administrador/departamento', 'DepartamentoController@store');
-    // get();
+    get('/administrador/impresora', 'ImpresoraController@index');
+        get('/administrador/impresora/alta_impresora', 'ImpresoraController@create');
+        post('/administrador/impresora', 'ImpresoraController@store');
     // get();
     // get();
     // get();

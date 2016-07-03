@@ -29,13 +29,13 @@
                 </tr>
             </tfoot>
             <tbody>
-               
+                @foreach($impresoras as $impresora)
                 <tr>
-                    <td>Airi Satou</td>
-                    <td>Accountant</td>
-                    <td>Tokyo</td>
-                    <td>33</td>
-                    <td>2008/11/28</td>
+                    <td>{{$impresora->nombre}}</td>
+                    <td>{{$impresora->marca}}</td>
+                    <td>{{$impresora->precio}}</td>
+                    <td>{{$impresora->estatus}}</td>
+                    <td>{{}}</td>
                     <td>
                         <div class="row">
                             <div class="col-md-3">
@@ -53,20 +53,17 @@
                         </div>
                     </td>
                 </tr>
-                
+                @endforeach
             </tbody>
         </table>
     </div>
     <div class="table-responsive col-md-2">
-        <a class="btn btn-info" href="/alta_impresora"><span><i class="fa fa-plus" aria-hidden="true"></i></span></a>
+        <a class="btn btn-info" href="/administrador/impresora/alta_impresora"><span><i class="fa fa-plus" aria-hidden="true"></i></span></a>
     </div>
 </div>
-
 <script>
 	$(document).ready(function() {
     $('#example').DataTable();
 } );
-
 </script>
-
 @stop
