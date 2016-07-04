@@ -34,8 +34,24 @@
                     <td>{{$impresora->nombre}}</td>
                     <td>{{$impresora->marca}}</td>
                     <td>{{$impresora->precio}}</td>
-                    <td>{{$impresora->estatus}}</td>
-                    <td>{{}}</td>
+                    <td>
+                        @if($impresora->estatus == 1)
+                        {{ 'Asignada' }}
+                        @elseif($impresora->estatus == 2)
+                        {{ 'No funciona' }}
+                        @elseif($impresora->estatus == 3)
+                        {{ 'Partes' }}
+                        @elseif($impresora->estatus == 4)
+                        {{ 'En reparación' }}
+                        @elseif($impresora->estatus == 5)
+                        {{ 'En garantía' }}
+                        @elseif($impresora->estatus == 6)
+                        {{ 'Baja' }}
+                        @else
+                        {{ 'Almacenada' }}
+                        @endif
+                    </td>
+                    <td>{{$impresora->fecha_mantenimiento or '-'}}</td>
                     <td>
                         <div class="row">
                             <div class="col-md-3">

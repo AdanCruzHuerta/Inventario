@@ -64,16 +64,20 @@
 								</select>
 							</div>
 							<div class="col-md-6">
-								<label for="" class="control-label">Fecha de compra</label>
-								<input type="date" class="form-control" name="fecha_compra" required>
+								<label for="" class="control-label">Precio</label>
+								<input class="form-control" type="text" name="precio" required placeholder="Ej: 1240">
 							</div>
 						</div>
 						<div class="row filas">
-							<div class="col-md-6">
+							<div class="col-md-4">
+								<label for="" class="control-label">Fecha de compra</label>
+								<input type="date" class="form-control" name="fecha_compra" required>
+							</div>
+							<div class="col-md-4">
 								<label for="" class="control-label">Fecha de instalación</label>
 								<input type="date" class="form-control" name="fecha_instalacion">
 							</div>
-							<div class="col-md-6">
+							<div class="col-md-4">
 								<label for="" class="control-label">Fecha de ultimo mantenimiento</label>
 								<input type="date" class="form-control" name="fecha_ultimo_mantenimiento">
 							</div>
@@ -100,7 +104,7 @@
 							@foreach($departamentos as $departamento)
 							<div class="checkbox">
 								<label>
-									<input type="checkbox" value="{{$departamento->id}}" name="departamento_id[]">
+									<input type="checkbox" value="{{$departamento->id}}" name="departamentos_id[]">
 									{{ $departamento->nombre }}
 								</label>
 							</div>

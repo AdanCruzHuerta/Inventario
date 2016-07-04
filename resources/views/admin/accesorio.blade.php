@@ -28,12 +28,13 @@
                 </tr>
             </tfoot>
             <tbody>
+                @foreach($accesorios as $accesorio)
                 <tr>
-                    <td>Tiger Nixon</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>61</td>
-                    <td>2011/04/25</td>
+                    <td>{{ $accesorio->nombre }}</td>
+                    <td>{{ $accesorio->marca }}</td>
+                    <td>{{ $accesorio->precio }}</td>
+                    <td>{{ $accesorio->estatus }}</td>
+                    <td>{{ $accesorio->equipo }}</td>
                     <td>
 	                    <div class="row">
 	                    	<div class="col-md-3">
@@ -51,36 +52,13 @@
 	                    </div>
                     </td>
 
-                </tr>
-                <tr>
-                    <td>Airi Satou</td>
-                    <td>Accountant</td>
-                    <td>Tokyo</td>
-                    <td>33</td>
-                    <td>2008/11/28</td>
-                    <td>
-	                    <div class="row">
-	                    	<div class="col-md-3">
-	                    		<button class="btn btn-success"><i class="fa fa-eye" aria-hidden="true"></i></button>
-	                    	</div>
-
-	                    	<div class="col-md-3">
-	                    		<button class="btn btn-primary" ><span><i class="fa fa-pencil" aria-hidden="true"></i></span></button>
-	                    	</div>
-	                    	
-	                    	<div class="col-md-3">
-	                    		<button class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
-	                    	</div>
-	                    	
-	                    </div>
-                    </td>
-                </tr>
-                
+                </tr>    
+                @endforeach           
             </tbody>
         </table>
     </div>
     <div class="table-responsive col-md-2">
-        <a class="btn btn-info" href="/alta_accesorio"><span><i class="fa fa-plus" aria-hidden="true"></i></span></a>
+        <a class="btn btn-info" href="/administrador/accesorio/alta_accesorio"><span><i class="fa fa-plus" aria-hidden="true"></i></span></a>
     </div>
 </div>
 

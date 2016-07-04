@@ -14,17 +14,19 @@ class ImpresoraController extends Controller
 {
     public function index()
     {
-    	$impresoras = RepositoryImpresora::all();
-    	return view('admin.impresora', compact('impresoras'));
+    	return view('admin.impresora', ['impresoras' => RepositoryImpresora::all()]);
     }
     public function create()
     {
-    	return view('admin.alta_impresora', ['departamentos'=>Departamento::orderBy('nombre')->get()]);
+    	return view('admin.alta_impresora', ['departamentos' => Departamento::orderBy('nombre')->get()]);
     }
     public function store(Request $request)
     {
     	$impresora = Impresora::create($request->all());
     	if ($impresora) {
+            if(count($request->departamentos_id) > 0) {
+                RepositoryImpresora::setDepartamentos($request, $impresora);
+            }
 			return back()->with('success', true);   		
     	}
     	return back()->with('error', true);

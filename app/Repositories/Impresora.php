@@ -13,4 +13,14 @@ class Impresora
 			->select('impresora.id', 'impresora.nombre', 'impresora.marca', 'impresora.precio', 'impresora.estatus', 'mantenimiento.fecha_mantenimiento')
 			->get();
 	}
+	static function setDepartamentos($request, $impresora)
+	{
+		foreach($request->departamentos_id as $departamento) {
+			\DB::table('departamento_has_impresora')->insert([
+				'departamento_id' => $departamento,
+				'impresora_id' => $impresora->id
+			]);
+		}
+		return true;
+	}
 }
