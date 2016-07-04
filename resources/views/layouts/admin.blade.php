@@ -13,7 +13,9 @@
     <link rel="icon" href="/img/favicon.ico">
     <!-- CSS del plugin -->
     <link rel="stylesheet" type="text/css" href="/css/jquery.dataTables.min.css">
+    <script type="text/javascript" src="//cdn.datatables.net/plug-ins/1.10.12/i18n/Spanish.json"></script>
     <script src="https://use.fontawesome.com/fdf1e10720.js"></script>
+
 </head>
 
 <body>
@@ -94,7 +96,7 @@
         $(document).ready(function() 
         {
             $('#example').DataTable( 
-            /*{
+            {
                 "language": 
                 {
                     "lengthMenu": "Visualizar _MENU_ registros por página",
@@ -117,7 +119,7 @@
                         "sSortDescending": ": Activar para ordenar la columna de manera descendente"
                     }
                 }
-            }*/);
+            });
         });
     </script>
 </body>
