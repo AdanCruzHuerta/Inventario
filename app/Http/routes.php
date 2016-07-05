@@ -22,13 +22,13 @@ Route::group(['middleware' => 'administrador'], function () {
         get('/administrador/accesorio/alta_accesorio', 'AccesoriosController@create');
         post('/administrador/accesorio', 'AccesoriosController@store');
 
-    get('/administrador/mantenimientoe', 'MantenimientoeController@index');
-        get('/administrador/mantenimientoe/alta_mantenimientoe', 'MantenimientoeController@create');
-        post('/administrador/mantenimientoe', 'MantenimientoeController@store');
+    get('/administrador/mantenimiento_equipo', 'MantenimientoEquipoController@index');
+        get('/administrador/mantenimiento_equipo/alta_mantenimiento_equipo', 'MantenimientoEquipoController@create');
+        post('/administrador/mantenimiento_equipo', 'MantenimientoEquipoController@store');
 
-    get('/administrador/mantenimientoi', 'MantenimientoiController@index');
-        get('/administrador/mantenimientoi/alta_mantenimientoi', 'MantenimientoiController@create');
-        post('/administrador/mantenimientoi', 'MantenimientoiController@store');  
+    get('/administrador/mantenimiento_impresora', 'MantenimientoImpresoraController@index');
+        get('/administrador/mantenimiento_impresora/alta_mantenimiento_impresora', 'MantenimientoImpresoraController@create');
+        post('/administrador/mantenimiento_impresora', 'MantenimientoImpresoraController@store');  
 
     // get();
     // get();

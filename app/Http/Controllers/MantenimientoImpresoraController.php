@@ -6,8 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Impresora;
 
-class MantenimientoeController extends Controller
+class MantenimientoImpresoraController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +17,8 @@ class MantenimientoeController extends Controller
      */
     public function index()
     {
-        return view('admin.mantenimientoe');
+        $impresoras = Impresora::orderBy('nombre')->get();
+        return view('admin.mantenimiento_impresora', compact('impresoras'));
     }
 
     /**
