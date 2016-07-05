@@ -68,10 +68,10 @@
                             <a href="#"><i class="fa fa-wrench fa-fw"></i>Mantenimiento<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="#"><i class='fa fa-desktop fa-fw'></i> Equipo de computo</a>
+                                    <a href="mantenimientoe"><i class='fa fa-desktop fa-fw'></i> Equipo de computo</a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class='fa fa-print fa-fw'></i> Impresoras</a>
+                                    <a href="mantenimientoi"><i class='fa fa-print fa-fw'></i> Impresoras</a>
                                 </li>
                             </ul>
                         </li>
