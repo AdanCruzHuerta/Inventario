@@ -18,6 +18,10 @@ Route::group(['middleware' => 'administrador'], function () {
     get('/administrador/impresora', 'ImpresoraController@index');
         get('/administrador/impresora/alta_impresora', 'ImpresoraController@create');
         post('/administrador/impresora', 'ImpresoraController@store');
+        get('/administrador/impresora/detalle/{id}', 'ImpresoraController@show');
+        get('/administrador/impresora/edit/{id}', 'ImpresoraController@edit');
+        post('/administrador/impresora/update', 'ImpresoraController@update');
+        post('/administrador/impresora/delete', 'ImpresoraController@destroy');
     get('/administrador/accesorio', 'AccesoriosController@index');
         get('/administrador/accesorio/alta_accesorio', 'AccesoriosController@create');
         post('/administrador/accesorio', 'AccesoriosController@store');
