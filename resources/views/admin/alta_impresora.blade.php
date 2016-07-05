@@ -78,7 +78,7 @@
 								<input type="date" class="form-control" name="fecha_instalacion">
 							</div>
 							<div class="col-md-4">
-								<label for="" class="control-label">Fecha de ultimo mantenimiento</label>
+								<label for="" class="control-label">Fecha de ultimo Manten.</label>
 								<input type="date" class="form-control" name="fecha_ultimo_mantenimiento">
 							</div>
 						</div>
