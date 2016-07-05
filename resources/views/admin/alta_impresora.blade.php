@@ -1,10 +1,6 @@
 @extends('layouts.admin')
 @section('content')
-	<style>
-		.filas{
-			margin-top: 20px;
-		}
-	</style>
+	<style>.filas{margin-top: 20px;}</style>
 	<div class="row">
 		<div class="col-xs-12">
 			<h2 class="titulos">Registrar Impresora</h2>

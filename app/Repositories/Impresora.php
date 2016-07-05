@@ -23,4 +23,17 @@ class Impresora
 		}
 		return true;
 	}
+	static function setUpdateDepartamentos($request, $impresora) 
+	{
+		\DB::table('departamento_has_impresora')->where('impresora_id', '=', $impresora->id)->delete();
+		if($request->has('departamentos_id')){
+			foreach($request->departamentos_id as $departamento) {
+				\DB::table('departamento_has_impresora')->insert([
+					'departamento_id' => $departamento,
+					'impresora_id' => $impresora->id
+				]);
+			}
+		}
+		return true;
+	}
 }

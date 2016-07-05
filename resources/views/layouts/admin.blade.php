@@ -80,7 +80,7 @@
             </div>
         </nav>
         <div id="page-wrapper">
-                @yield('content')
+            @yield('content')
         </div>
     </div>
     <!-- JS del plugin -->
@@ -90,7 +90,6 @@
     <script src="/js/metisMenu.min.js"></script>
     <script src="/js/sb-admin-2.js"></script>
     <script src="/js/jquery.dataTables.min.js"></script>
-    
     <!-- Script que traduce la data table -->
     <script>    
         $(document).ready(function() 
@@ -122,5 +121,6 @@
             });
         });
     </script>
+    @yield('scripts')
 </body>
 </html>
