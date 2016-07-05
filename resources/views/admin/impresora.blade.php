@@ -55,7 +55,7 @@
                     <td>
                         <div class="row">
                             <div class="col-md-3">
-                                <button class="btn btn-success"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                                <a class="btn btn-success" title="Ver detalle" href="/administrador/impresora/detalle/{{$impresora->id}}"><i class="fa fa-eye" aria-hidden="true"></i></a>
                             </div>
 
                             <div class="col-md-3">

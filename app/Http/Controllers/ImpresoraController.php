@@ -31,4 +31,9 @@ class ImpresoraController extends Controller
     	}
     	return back()->with('error', true);
     }
+    public function show($id)
+    {
+        $impresora = Impresora::find($id);    
+        //return view('admin.');
+    }
 }
