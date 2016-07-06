@@ -1,22 +1,21 @@
 @extends('layouts.admin')
 @section('content')
-
 <div class="container">
-	<h2 class="titulos">Historial de Mantenimientos de Impresoras</h2>
+	<h2 class="titulos">Historial de Mantenimientos de Equipos de Computo</h2>
 	<div class="row">
 
 		<div class="col-md-3">
-			<label for="">Selecciona la impresora</label>
-			<select class="form-control" name="Departamento_id">
-              {{-- <option value="#">-Impresora-</option>
-              @foreach($impresoras as $impresora)
-              <option value="{{$impresora->id}}">{{$impresora->nombre}}</option>
-              @endforeach --}}
+			<label for="">Selecciona el Equipo de Computo</label>
+			<select class="form-control" name="Equipo_id">
+            	<option value="#">-Equipo de Computo-</option>
+            	@foreach($equipos as $equipo)
+            	<option value="{{$equipo->id}}">{{$equipo->nombre}}</option>
+            	@endforeach
             </select>
 		</div>
 		<div class="table-responsive col-md-3">
 
-        	<br><a class="btn btn-info col-md-offset-4" href="/administrador/mantenimientoi/alta_mantenimientoi">Nuevo Mantenimiento</a>
+        	<br><a class="btn btn-info col-md-offset-2" href="/administrador/alta_mantenimiento_equipo">Nuevo Mantenimiento</a>
     	</div>
 	</div>
 	<div class="row">
@@ -46,5 +45,7 @@
 		</div>
 	</div><br><br>
 </div>
+	
+
 
 @stop

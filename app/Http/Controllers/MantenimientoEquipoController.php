@@ -6,8 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Equipo;
 
-class MantenimientoiController extends Controller
+class MantenimientoEquipoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +17,8 @@ class MantenimientoiController extends Controller
      */
     public function index()
     {
-        return view('admin.mantenimientoi');
+        $equipos = Equipo::orderBy('nombre')->get();
+        return view('admin.mantenimiento_equipo', compact('equipos'));
     }
 
     /**
@@ -26,7 +28,7 @@ class MantenimientoiController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
