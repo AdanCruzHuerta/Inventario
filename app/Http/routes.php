@@ -11,6 +11,10 @@ Route::group(['middleware' => 'administrador'], function () {
     get('/administrador', 'EquipoComputoController@index');
     	get('/administrador/equipocomputo/create', 'EquipoComputoController@create');
     	post('/administrador/equipocomputo/store', 'EquipoComputoController@store');
+        get('/administrador/equipocomputo/detalle/{id}', 'EquipoComputoController@show');
+        get('/administrador/equipocomputo/edit/{id}', 'EquipoComputoController@edit');
+        post('/administrador/equipocomputo/update', 'EquipoComputoController@update');
+        post('/administrador/equipocomputo/delete', 'EquipoComputoController@destroy');
     get('/administrador/empleado', 'EmpleadoController@index');
     	post('/administrador/empleado', 'EmpleadoController@store');
     get('/administrador/departamento', 'DepartamentoController@index');

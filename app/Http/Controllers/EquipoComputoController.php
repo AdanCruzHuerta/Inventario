@@ -30,4 +30,36 @@ class EquipoComputoController extends Controller
     	}
     	return back()->with('error', true); 
     }
+    public function show($id)
+    {
+        return view('admin.detalle_equipo', [ 'equipo' => RepositoryEquipo::detalle($id)]);
+    }
+    public function edit($id)
+    {
+        $empleados = Empleado::orderBy('nombre')->get();
+        $equipo = Equipo::find($id);
+        return view('admin.editar_equipo', compact('empleados', 'equipo'));
+    }
+    public function update(Request $request)
+    {
+        $equipo = Equipo::find($request->id);
+        $equipo->fill($request->all());
+        if($equipo->save()){
+            return back()->with('success', true);
+        }
+        return back()->with('error', true);
+    }
+    public function destroy(Request $request)
+    {
+        $accesorios = \DB::table('accesorio')->where('equipo_id', '=', $request->id)->get();
+        $accesorios = 
+        if(count($accesorios) > 0) {
+            foreach($accesorios as $accesorio) {
+
+            }
+        }
+        $equipo = Equipo::find($request->id);
+        $equipo->delete();
+        return back();
+    }
 }

@@ -51,7 +51,11 @@
                         @endif
                     </td>
                     <td>{{$equipo->departamento}}</td>
-                    <td></td>
+                    <td>
+                        <a href="/administrador/equipocomputo/detalle/{{$equipo->id}}" class="btn btn-success"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                        <a href="/administrador/equipocomputo/edit/{{$equipo->id}}" class="btn btn-info"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                        <a href="" class="btn btn-danger delete" data-id="{{$equipo->id}}" data-toggle="modal" data-target="#myModal"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>
@@ -61,11 +65,35 @@
         <a class="btn btn-info" href="/administrador/equipocomputo/create"><span><i class="fa fa-plus" aria-hidden="true"></i></span></a>
     </div>
 </div>
-
+<div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-sm">
+        <form action="/administrador/equipocomputo/delete" method="POST">
+            {{ csrf_field() }}
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Borrar equipo de computo</h4>
+            </div>
+            <div class="modal-body">
+              <p>¿Esta seguro de querer borrar el registro del equipo de computo?</p>
+              <input type="hidden" name="id" id="id_equipo">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-danger">Borrar</button>
+            </div>
+          </div>
+        </form>
+        </div>
+    </div>
+@stop
+@section('scripts')
 <script>
-	$(document).ready(function() {
-    $('#example').DataTable();
-} );
-
+    $(function(){
+        $('.delete').click(function(){
+            var id = $(this).attr("data-id");
+            $("#id_equipo").val(id);
+        })
+    })
 </script>
 @stop

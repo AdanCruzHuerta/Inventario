@@ -1,9 +1,12 @@
 @extends('layouts.admin')
 
 @section('content')
-
-<div class="container">
-	<h2 class="pull-left titulos">Registrar equipo de computo</h2>
+<div class="row">
+	<div class="col-xs-12">
+		<h2 class="pull-left titulos">Registrar equipo de computo</h2>
+	</div>
+</div>
+<div class="row">
 	<div class="col-xs-12">
 		 @if(session()->has('success'))
             <div class="alert alert-success">Genial!. El equipo fue creado correctamente.</div>
@@ -118,6 +121,7 @@
 			</div> <br>
 			<div class="row">
 				<div class="col-md-12">
+					<a href="/administrador" class="btn btn-default">Regresar</a>
 					<input type="submit" value="Registrar" class="btn  btn-primary col-md-offset-8">
 				</div>
 			</div>
