@@ -51,7 +51,9 @@
                         @endif
                     </td>
                     <td>{{$equipo->departamento}}</td>
-                    <td></td>
+                    <td>
+                        
+                    </td>
                 </tr>
                 @endforeach
             </tbody>
