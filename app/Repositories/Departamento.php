@@ -4,6 +4,8 @@
 */
 namespace App\Repositories;
 
+use App\Empleado;
+
 class Departamento
 {
 	static function getImpresoras($id)
@@ -13,5 +15,9 @@ class Departamento
 			->where('departamento_has_impresora.impresora_id', '=', $id)
 			->select('departamento.id', 'departamento.nombre')
 			->get();
+	}
+	static function getEmpleados($id)
+	{
+		return Empleado::where('Departamento_id', '=', $id)->get();
 	}
 }

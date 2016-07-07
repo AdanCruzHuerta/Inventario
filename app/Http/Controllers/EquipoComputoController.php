@@ -6,9 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Departamento;
-use App\Empleado;
-use App\Equipo;
+use App\{Departamento,Empleado,Equipo,Accesorio};
 use App\Repositories\Equipo as RepositoryEquipo;
 
 class EquipoComputoController extends Controller
@@ -51,11 +49,11 @@ class EquipoComputoController extends Controller
     }
     public function destroy(Request $request)
     {
-        $accesorios = \DB::table('accesorio')->where('equipo_id', '=', $request->id)->get();
-        $accesorios = 
+        //$accesorios = \DB::table('accesorio')->where('equipo_id', '=', $request->id)->get();
+        $accesorios = Accesorio::where('equipo_id', '=', $request->id)->get();
         if(count($accesorios) > 0) {
             foreach($accesorios as $accesorio) {
-
+                $accesorio->equipo_id = null;
             }
         }
         $equipo = Equipo::find($request->id);

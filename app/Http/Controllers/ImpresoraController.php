@@ -6,10 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Impresora;
-use App\Departamento;
-use App\Repositories\Impresora as RepositoryImpresora;
-use App\Repositories\Departamento as RepositoryDepartamento;
+use App\{Impresora, Departamento};
+use App\Repositories\{Impresora as RepositoryImpresora, Departamento as RepositoryDepartamento};
 
 class ImpresoraController extends Controller
 {

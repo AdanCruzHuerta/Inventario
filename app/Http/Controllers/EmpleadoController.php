@@ -6,41 +6,17 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Departamento;
-use App\Empleado;
-// -- Repositories
+use App\{Departamento,Empleado};
 use App\Repositories\Empleado as EmpleadoRepository;
 
 class EmpleadoController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $empleados = EmpleadoRepository::all();
         $departamentos = Departamento::orderBy('nombre')->get();
         return view('admin.empleado', compact('empleados', 'departamentos'));
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $empleado = Empleado::create($request->all());
@@ -49,49 +25,25 @@ class EmpleadoController extends Controller
         }
         return back()->with('error', true);
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+    public function update(Request $request)
     {
-        //
+        $empleado = Empleado::find($request->id);
+        $empleado->fill($request->all());
+        $empleado->save();
+        return back()->with('success_update', true);
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    public function destroy(Request $request)
     {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        // obtener el equipo que tiene asignado el usuario
+        $equipo = EmpleadoRepository::getEquipo($request->id);
+        // si tiene equipo eliinamos la relacion
+        if(is_object($equipo)){
+            $equipo->Empleado_id = null;
+            $equipo->save();
+        }
+        //eliminamos al empleado
+        $equipo = Empleado::find($request->id);
+        $equipo->delete();
+        return back();
     }
 }

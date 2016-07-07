@@ -52,13 +52,9 @@
                     </td>
                     <td>{{$equipo->departamento}}</td>
                     <td>
-<<<<<<< HEAD
                         <a href="/administrador/equipocomputo/detalle/{{$equipo->id}}" class="btn btn-success"><i class="fa fa-eye" aria-hidden="true"></i></a>
                         <a href="/administrador/equipocomputo/edit/{{$equipo->id}}" class="btn btn-info"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                         <a href="" class="btn btn-danger delete" data-id="{{$equipo->id}}" data-toggle="modal" data-target="#myModal"><i class="fa fa-trash" aria-hidden="true"></i></a>
-=======
-                        
->>>>>>> e89513928c3b298a2d1877290402de7e690751bb
                     </td>
                 </tr>
                 @endforeach
