@@ -1,9 +1,6 @@
+@extends('layouts.admin')
 @section('content')
-	<style>
-		.filas{
-			margin-top: 20px;
-		}
-	</style>
+	<style>.filas{margin-top: 20px;}</style>
 	<div class="row">
 		<div class="col-xs-12">
 			<h2 class="titulos">Registrar Accesorio</h2>
@@ -15,7 +12,7 @@
 			<form action="/administrador/accesorio" method="POST">
 				{{ csrf_field() }}
 				<div class="row">
-					<div class="col-md-8">
+					<div class="col-md-10">
 						<div class="row filas">
 							<div class="col-md-6">
 								<label for="" class="control-label" >Nombre (ID)</label>
@@ -58,14 +55,29 @@
 								<input type="text" class="form-control" placeholder="Ej: J66651A9J146851A" name="serie">
 							</div>
 							<div class="col-md-6">
-								<label for="" class="control-label">Fecha de compra</label>
-								<input type="date" class="form-control" name="fecha_compra" required>
+								<label for="" class="control-label">PC asignada</label>
+								<select name="equipo_id" required class="form-control">
+									<option value="">-equipo-</option>
+									@foreach($equipos as $equipo)
+									<option value="{{ $equipo->id }}">{{ $equipo->nombre }}</option>
+									@endforeach
+								</select>
 							</div>
 						</div>
 						<div class="row filas">
 							<div class="col-md-6">
+								<label for="" class="control-label">Fecha de compra</label>
+								<input type="date" class="form-control" name="fecha_compra" required>
+							</div>
+							<div class="col-md-6">
 								<label for="" class="control-label">Fecha de asignación</label>
 								<input type="date" class="form-control" name="fecha_asignacion">
+							</div>
+						</div>
+						<div class="row filas">
+							<div class="col-md-6">
+								<label for="">Precio</label>
+								<input type="text" name="precio" class="form-control" required placeholder="Ej. 200">
 							</div>
 							<div class="col-md-6">
 								<label for="" class="control-label">Caracteristicas adicionales</label>
@@ -74,18 +86,9 @@
 						</div>
 						<div class="row filas">
 							<div class="col-xs-12">
+								<a href="/administrador/accesorio" class="btn btn-default">Regresar</a>
 								<input type="submit" class="btn btn-primary pull-right" value="Registrar">
 							</div>
-						</div>
-					</div>
-					<div class="col-md-2">
-						<div class="row filas">
-							<label for="" class="control-label">PC asignada</label>
-							@foreach($equipos as $equipo)
-							<div class="radio">
-							  	<label><input type="radio" name="equipo_id" value="{{ $equipo->id }}">{{$equipo->nombre}}</label>
-							</div>
-							@endforeach
 						</div>
 					</div>
 				</div>

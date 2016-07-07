@@ -33,7 +33,23 @@
                     <td>{{ $accesorio->nombre }}</td>
                     <td>{{ $accesorio->marca }}</td>
                     <td>{{ $accesorio->precio }}</td>
-                    <td>{{ $accesorio->estatus }}</td>
+                    <td>
+                        @if($accesorio->estatus == 1)
+                            {{ 'Asignada' }}
+                        @elseif($accesorio->estatus == 2)
+                            {{ 'No funciona' }}
+                        @elseif($accesorio->estatus == 3)
+                            {{ 'Partes' }}
+                        @elseif($accesorio->estatus == 4)
+                            {{ 'En reparación' }}
+                        @elseif($accesorio->estatus == 5)
+                            {{ 'En garantía' }}
+                        @elseif($accesorio->estatus == 6)
+                            {{ 'Baja' }}
+                        @else
+                            {{ 'Almacenada' }}
+                        @endif
+                    </td>
                     <td>{{ $accesorio->equipo }}</td>
                     <td>
 	                    <div class="row">
@@ -58,41 +74,13 @@
     <div class="table-responsive col-md-2">
         <a class="btn btn-info" href="/administrador/accesorio/alta_accesorio"><span><i class="fa fa-plus" aria-hidden="true"></i></span></a>
     </div>
-    <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog modal-sm">
-        <form action="/administrador/accesorio/delete" method="POST">
-            {{ csrf_field() }}
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Borrar accesorio</h4>
-            </div>
-            <div class="modal-body">
-              <p>¿Esta seguro de querer borrar el registro del accesorio?</p>
-              <p id="nombre_accesorio"></p>
-              <input type="hidden" name="id" id="id_impresora">
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-danger">Borrar</button>
-            </div>
-          </div>
-        </form>
-        </div>
-    </div>
+    @include('admin.modales.eliminar_accesorio')
 </div>
-
-<script>
-	$(document).ready(function() {
-    $('#example').DataTable();
-} );
-
-</script>
 @stop
 @section('scripts')
 <script>
     $('.delete').click(function(){
-        var id = $(this).attr("data-id")
-        $("#id_accesorio").val(id);
+        $("#id_accesorio_delete").val($(this).attr("data-id"));
     })
 </script>
+@stop

@@ -15,7 +15,6 @@
     <link rel="stylesheet" type="text/css" href="/css/jquery.dataTables.min.css">
     <script type="text/javascript" src="//cdn.datatables.net/plug-ins/1.10.12/i18n/Spanish.json"></script>
     <script src="https://use.fontawesome.com/fdf1e10720.js"></script>
-
 </head>
 
 <body>
@@ -85,6 +84,8 @@
     </div>
     <!-- JS del plugin -->
     <script type="text/javascript" language="javascript" src="/js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/vue.resource/0.9.3/vue-resource.min.js"></script>
     <script type="text/javascript" src="//cdn.datatables.net/plug-ins/1.10.12/i18n/Spanish.json"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/metisMenu.min.js"></script>

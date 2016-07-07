@@ -37,6 +37,10 @@ Route::group(['middleware' => 'administrador'], function () {
     get('/administrador/accesorio', 'AccesoriosController@index');
         get('/administrador/accesorio/alta_accesorio', 'AccesoriosController@create');
         post('/administrador/accesorio', 'AccesoriosController@store');
+        get('/administrador/accesorio/detalle/{id}', 'AccesoriosController@show');
+        get('/administrador/accesorio/edit/{id}', 'AccesoriosController@edit');
+        post('/administrador/accesorio/update', 'AccesoriosController@update');
+        post('/administrador/accesorio/delete', 'AccesoriosController@destroy');
     // Módulo de "Mantenimiento"
     get('/administrador/mantenimiento_equipo', 'MantenimientoEquipoController@index');
         get('/administrador/mantenimiento_equipo/alta_mantenimiento_equipo', 'MantenimientoEquipoController@create');

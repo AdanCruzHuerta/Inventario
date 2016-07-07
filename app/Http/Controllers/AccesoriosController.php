@@ -27,4 +27,29 @@ class AccesoriosController extends Controller
     	}
     	return back()->with('error', true);
     }
+    public function show($id)
+    {
+        return view('admin.detalle_accesorio', ['accesorio' => RepositoryAccesorio::getAccesorio($id)]);
+    }
+    public function edit($id)
+    {
+        $equipos = Equipo::orderBy('nombre')->get();
+        $accesorio = Accesorio::find($id);
+        return view('admin.editar_accesorio', compact('equipos', 'accesorio')); 
+    }
+    public function update(Request $request)
+    {
+        $accesorio = Accesorio::find($request->id);
+        $accesorio->fill($request->all());
+        if($accesorio->save()){
+            return back()->with('success', true);
+        }
+        return back()->with('error', true);
+    }
+    public function destroy(Request $request)
+    {
+        $accesorio = Accesorio::find($request->id);
+        $accesorio->delete();
+        return back();
+    }
 }
