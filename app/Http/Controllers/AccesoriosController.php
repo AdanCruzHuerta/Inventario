@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\{Equipo,Accesorio};
+use App\Equipo;
+use App\Accesorio;
 use App\Repositories\Accesorio as RepositoryAccesorio;
 
 class AccesoriosController extends Controller

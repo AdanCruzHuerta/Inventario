@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\{Departamento,Empleado};
+use App\Departamento;
+use App\Empleado;
 use App\Repositories\Empleado as EmpleadoRepository;
 
 class EmpleadoController extends Controller

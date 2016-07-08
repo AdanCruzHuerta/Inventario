@@ -39,4 +39,8 @@ class MantenimientoEquipoController extends Controller
     {
         //
     }
+    public function getMantenimientosEquipo(Request $request)
+    {
+        return 
+    }
 }
