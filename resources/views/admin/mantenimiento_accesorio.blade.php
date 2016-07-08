@@ -3,21 +3,21 @@
 	<div id="app">
 		<div class="row">
 			<div class="col-xs-12">
-				<h2 class="titulos">Historial de Mantenimientos de Equipos de Computo</h2>		
+				<h2 class="titulos">Historial de Mantenimientos de Accesorios</h2>		
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-3">
-				<label for="">Selecciona el Equipo de Computo</label>
-				<select class="form-control" name="Equipo_id" v-model="equipo">
-	            	<option value="">-Equipo de Computo-</option>
-	            	@foreach($equipos as $equipo)
-	            	<option value="{{$equipo->id}}">{{$equipo->nombre}}</option>
+				<label for="">Selecciona el Accesorio</label>
+				<select class="form-control" name="accesorio_id" v-model="accesorio">
+	            	<option value="">-Accesorio-</option>
+	            	@foreach($accesorios as $accesorio)
+	            	<option value="{{$accesorio->id}}">{{$accesorio->nombre}}</option>
 	            	@endforeach
 	            </select>
 			</div>
 			<div class="table-responsive col-md-3">
-	        	<br><a class="btn btn-info col-md-offset-2" href="/administrador/mantenimiento_equipo/alta_mantenimiento_equipo">Nuevo Mantenimiento</a>
+	        	<br><a class="btn btn-info col-md-offset-2" href="/administrador/mantenimiento_accesorio/alta_mantenimiento_accesorio">Nuevo Mantenimiento</a>
 	    	</div>
 		</div> <br>
 		<div class="row">
@@ -54,18 +54,18 @@
 	new Vue({
 		el: "#app",
 		data: {
-			equipo: "",
+			accesorio: "",
 			mantenimientos: [],
 			mensaje: false
 		},
 		watch: {
-		    equipo: function(value) {
+		    accesorio: function(value) {
 		    	this.get_mantenimientos_equipo(value);
 		    }
 		},
 		methods: {
 			get_mantenimientos_equipo: function(value) {
-				this.$http.get('/administrador/mantenimiento_equipo/get_mantenimientos_equipo', {id: value}).then(function(response){
+				this.$http.get('/administrador/mantenimiento_equipo/get_mantenimientos_accesorio', {id: value}).then(function(response){
 		        	if(response.data.length <= 0){
 		        		this.mensaje = true;
 		        		this.mantenimientos = [];

@@ -73,6 +73,9 @@
                                 <li>
                                     <a href="/administrador/mantenimiento_impresora"><i class='fa fa-print fa-fw'></i> Impresoras</a>
                                 </li>
+                                <li>
+                                    <a href="/administrador/mantenimiento_accesorio"><i class='fa fa-archive fa-fw'></i> Accesorios</a>
+                                </li>
                             </ul>
                         </li>
                     </ul>

@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Impresora;
+use App\Mantenimiento;
+use App\Repositories\Mantenimiento as RepositoryMantenimiento;
 
 class MantenimientoImpresoraController extends Controller
 {
@@ -28,7 +30,7 @@ class MantenimientoImpresoraController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.alta_matenimiento_impresora', ['impresoras'=> Impresora::orderBy('nombre')->get()]);
     }
 
     /**
@@ -39,7 +41,11 @@ class MantenimientoImpresoraController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $mantenimiento = Mantenimiento::create($request->all());
+        if ($mantenimiento) {
+            return back()->with('success', true);
+        }
+        return back()->with('error', true);
     }
 
     /**
@@ -85,5 +91,9 @@ class MantenimientoImpresoraController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function getMantenimientosImpresora(Request $request)
+    {
+        return RepositoryMantenimiento::getMantenimientosImpresora($request->id);
     }
 }

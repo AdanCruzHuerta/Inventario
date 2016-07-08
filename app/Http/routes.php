@@ -49,4 +49,9 @@ Route::group(['middleware' => 'administrador'], function () {
     get('/administrador/mantenimiento_impresora', 'MantenimientoImpresoraController@index');
         get('/administrador/mantenimiento_impresora/alta_mantenimiento_impresora', 'MantenimientoImpresoraController@create');
         post('/administrador/mantenimiento_impresora', 'MantenimientoImpresoraController@store');
+        get('/administrador/mantenimiento_equipo/get_mantenimientos_impresoras', 'MantenimientoImpresoraController@getMantenimientosImpresora');
+    get('/administrador/mantenimiento_accesorio', 'MantenimientoAccesorioController@index');
+        get('/administrador/mantenimiento_equipo/get_mantenimientos_accesorio', 'MantenimientoAccesorioController@getMantenimientosAccesorio');
+        get('/administrador/mantenimiento_accesorio/alta_mantenimiento_accesorio', 'MantenimientoAccesorioController@create');
+        post('/administrador/mantenimiento_accesorio', 'MantenimientoAccesorioController@store');
 });
