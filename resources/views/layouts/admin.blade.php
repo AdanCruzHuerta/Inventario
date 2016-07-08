@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
+    <meta id="token"  name="token" value="{{ csrf_token() }}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Inventario</title>
@@ -67,10 +68,10 @@
                             <a href="#"><i class="fa fa-wrench fa-fw"></i>Mantenimiento<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="mantenimiento_equipo"><i class='fa fa-desktop fa-fw'></i> Equipo de computo</a>
+                                    <a href="/administrador/mantenimiento_equipo"><i class='fa fa-desktop fa-fw'></i> Equipo de computo</a>
                                 </li>
                                 <li>
-                                    <a href="mantenimiento_impresora"><i class='fa fa-print fa-fw'></i> Impresoras</a>
+                                    <a href="/administrador/mantenimiento_impresora"><i class='fa fa-print fa-fw'></i> Impresoras</a>
                                 </li>
                             </ul>
                         </li>
@@ -85,7 +86,7 @@
     <!-- JS del plugin -->
     <script type="text/javascript" language="javascript" src="/js/jquery-1.12.3.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/vue.resource/0.9.3/vue-resource.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/0.7.0/vue-resource.min.js"></script>
     <script type="text/javascript" src="//cdn.datatables.net/plug-ins/1.10.12/i18n/Spanish.json"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/metisMenu.min.js"></script>

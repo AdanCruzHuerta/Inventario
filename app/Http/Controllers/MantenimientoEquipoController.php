@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Equipo;
+use App\Mantenimiento;
+use App\Repositories\Mantenimiento as RepositoryMantenimiento;
 
 class MantenimientoEquipoController extends Controller
 {
@@ -17,11 +19,15 @@ class MantenimientoEquipoController extends Controller
     }
     public function create()
     {
-        
+        return view('admin.alta_mantenimiento_equipo', ['equipos'=>Equipo::orderBy('nombre')->get()]);
     }
     public function store(Request $request)
     {
-        //
+        $mantenimiento = Mantenimiento::create($request->all());
+        if ($mantenimiento) {
+            return back()->with('success', true);
+        }
+        return back()->with('error', true);
     }
     public function show($id)
     {
@@ -41,6 +47,6 @@ class MantenimientoEquipoController extends Controller
     }
     public function getMantenimientosEquipo(Request $request)
     {
-        return 
+        return RepositoryMantenimiento::getMantenimientosEquipo($request->id);
     }
 }
