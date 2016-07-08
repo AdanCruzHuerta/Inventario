@@ -28,6 +28,27 @@ class MantenimientoAccesorioController extends Controller
         }
         return back()->with('error', true);
     }
+    public function edit($id)
+    {
+        $mantenimiento = Mantenimiento::find($id);
+        $accesorios = Accesorio::orderBy('nombre')->get();
+        return view('admin.editar_mantenimiento_accesorio', compact('mantenimiento', 'accesorios'));
+    }
+    public function update(Request $request)
+    {
+        $mantenimiento = Mantenimiento::find($request->id);
+        $mantenimiento->fill($request->all());
+        if ($mantenimiento->save()) {
+            return back()->with('success', true);
+        }
+        return back()->with('error', true);
+    }
+    public function destroy(Request $request)
+    {
+        $mantenimiento = Mantenimiento::find($request->id);
+        $mantenimiento->delete();
+        return back();
+    }
     public function getMantenimientosAccesorio(Request $request)
     {
     	return RepositoryMantenimiento::getMantenimientosAccesorio($request->id);

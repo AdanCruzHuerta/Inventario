@@ -12,33 +12,15 @@ use App\Repositories\Mantenimiento as RepositoryMantenimiento;
 
 class MantenimientoImpresoraController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $impresoras = Impresora::orderBy('nombre')->get();
         return view('admin.mantenimiento_impresora', compact('impresoras'));
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view('admin.alta_matenimiento_impresora', ['impresoras'=> Impresora::orderBy('nombre')->get()]);
     }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $mantenimiento = Mantenimiento::create($request->all());
@@ -47,50 +29,26 @@ class MantenimientoImpresoraController extends Controller
         }
         return back()->with('error', true);
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-        //
+        $mantenimiento = Mantenimiento::find($id);
+        $impresoras = Impresora::orderBy('nombre')->get();
+        return view('admin.editar_mantenimiento_impresora', compact('mantenimiento', 'impresoras'));
     }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $mantenimiento = Mantenimiento::find($request->id);
+        $mantenimiento->fill($request->all());
+        if ($mantenimiento->save()) {
+            return back()->with('success', true);
+        }
+        return back()->with('error', true);
     }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        $mantenimiento = Mantenimiento::find($request->id);
+        $mantenimiento->delete();
+        return back();
     }
     public function getMantenimientosImpresora(Request $request)
     {
