@@ -77,7 +77,7 @@
 								<label for="">Precio</label>
 								<div class="input-group">
 									<span class="input-group-addon">$</span>
-									<input type="text" name="precio" class="form-control" required placeholder="Ej. 200">
+									<input type="text" name="precio" class="form-control" required placeholder="No usar comas para los miles">
 								</div>
 							</div>
 						</div>

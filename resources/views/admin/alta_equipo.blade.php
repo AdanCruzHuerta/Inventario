@@ -105,7 +105,7 @@
 					<label for="" class="control-label">Precio:</label>
 					<div class="input-group">
 					<span class="input-group-addon">$</span>
-						<input type="text" class="form-control" name="precio" placeholder="Ej: 3540" required />
+						<input type="text" class="form-control" name="precio" placeholder="No usar comas para los miles" required />
 						
 					</div>
 				</div>

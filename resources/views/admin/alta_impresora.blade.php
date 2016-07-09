@@ -61,7 +61,7 @@
 							</div>
 							<div class="col-md-6">
 								<label for="" class="control-label">Precio</label>
-								<input class="form-control" type="text" name="precio" required placeholder="Ej: 1240">
+								<input class="form-control" type="text" name="precio" required placeholder="No usar comas para los miles">
 							</div>
 						</div>
 						<div class="row filas">
