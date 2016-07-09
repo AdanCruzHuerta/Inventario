@@ -6,7 +6,10 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\{Departamento,Empleado,Equipo,Accesorio};
+use App\Departamento;
+use App\Empleado;
+use App\Equipo;
+use App\Accesorio;
 use App\Repositories\Equipo as RepositoryEquipo;
 
 class EquipoComputoController extends Controller
