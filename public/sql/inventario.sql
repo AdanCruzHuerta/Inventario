@@ -30,7 +30,7 @@ CREATE TABLE `accesorio` (
   `marca` varchar(45) DEFAULT NULL,
   `modelo` varchar(45) DEFAULT NULL,
   `serie` varchar(45) DEFAULT NULL,
-  `precio` varchar(45) NOT NULL,
+  `precio` double NOT NULL,
   `caracteristica` text COMMENT 'Caracteristicas adicionales que ayuden a identificar el accesorio',
   `estatus` varchar(45) NOT NULL COMMENT '1.- Asignada\n2.- No funciona\n3.- Partes\n4.- En reparación\n5.- En garantía\n6.- Baja\n7.- Almacenada',
   `fecha_asignacion` date DEFAULT NULL,
@@ -48,7 +48,7 @@ CREATE TABLE `accesorio` (
 
 LOCK TABLES `accesorio` WRITE;
 /*!40000 ALTER TABLE `accesorio` DISABLE KEYS */;
-INSERT INTO `accesorio` VALUES (1,'Mouse','Acteck','MA10','GSTYYTABSJSD','',NULL,'1',NULL,'2016-07-01',1);
+INSERT INTO `accesorio` VALUES (1,'Teclado ','Acteck','T100','T100ABC',350,'Sin observaciones','1','2016-07-05','2016-07-01',2);
 /*!40000 ALTER TABLE `accesorio` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -72,7 +72,7 @@ CREATE TABLE `departamento` (
 
 LOCK TABLES `departamento` WRITE;
 /*!40000 ALTER TABLE `departamento` DISABLE KEYS */;
-INSERT INTO `departamento` VALUES (1,'Sistemas'),(2,'Recursos humanos'),(3,'Telemarketing'),(4,'Almacén 1'),(5,'Compras'),(6,'Credito y Cobranza'),(7,'Ventas'),(8,'Surtido'),(9,'Embarques'),(10,'Intendencia'),(11,'Mantenimiento'),(12,'Seguridad'),(13,'Contabilidad'),(14,'Almacén 2');
+INSERT INTO `departamento` VALUES (1,'Sistemas'),(2,'Recursos humanos'),(3,'Telemarketing'),(4,'Almacén 1'),(5,'Compras'),(6,'Credito y Cobranza'),(8,'Surtido'),(9,'Embarques'),(10,'Intendencia'),(11,'Mantenimiento'),(12,'Seguridad'),(13,'Contabilidad'),(14,'Almacén 2');
 /*!40000 ALTER TABLE `departamento` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -92,7 +92,7 @@ CREATE TABLE `departamento_has_impresora` (
   KEY `fk_departamento_has_impresora_departamento1_idx` (`departamento_id`),
   CONSTRAINT `fk_departamento_has_impresora_departamento1` FOREIGN KEY (`departamento_id`) REFERENCES `departamento` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_departamento_has_impresora_impresora1` FOREIGN KEY (`impresora_id`) REFERENCES `impresora` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -101,7 +101,7 @@ CREATE TABLE `departamento_has_impresora` (
 
 LOCK TABLES `departamento_has_impresora` WRITE;
 /*!40000 ALTER TABLE `departamento_has_impresora` DISABLE KEYS */;
-INSERT INTO `departamento_has_impresora` VALUES (1,4,2),(2,14,2);
+INSERT INTO `departamento_has_impresora` VALUES (1,2,1),(2,1,1),(3,3,1);
 /*!40000 ALTER TABLE `departamento_has_impresora` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -115,11 +115,11 @@ DROP TABLE IF EXISTS `empleado`;
 CREATE TABLE `empleado` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(45) NOT NULL,
-  `Departamento_id` int(11) NOT NULL,
+  `Departamento_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_Empleado_Departamento_idx` (`Departamento_id`),
   CONSTRAINT `fk_Empleado_Departamento` FOREIGN KEY (`Departamento_id`) REFERENCES `departamento` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -128,7 +128,7 @@ CREATE TABLE `empleado` (
 
 LOCK TABLES `empleado` WRITE;
 /*!40000 ALTER TABLE `empleado` DISABLE KEYS */;
-INSERT INTO `empleado` VALUES (1,'Adán Cruz Huerta',1),(2,'Juan Garcia Virgen',3);
+INSERT INTO `empleado` VALUES (1,'Adán Cruz Huerta',1),(3,'Christian Magallon',1);
 /*!40000 ALTER TABLE `empleado` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -153,13 +153,13 @@ CREATE TABLE `equipo` (
   `tipo` varchar(45) DEFAULT NULL COMMENT '1.-Laptop\n2.-Computadora de Escritorio\n',
   `fecha_instalacion` date DEFAULT NULL,
   `fecha_compra` date NOT NULL,
-  `Empleado_id` int(11) NOT NULL,
+  `Empleado_id` int(11) DEFAULT NULL,
   `sap_instalado` int(11) DEFAULT NULL COMMENT '1 - Si\n2 - No',
   `fecha_ultimo_mantenimiento` date DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_Equipo_Empleado1_idx` (`Empleado_id`),
   CONSTRAINT `fk_Equipo_Empleado1` FOREIGN KEY (`Empleado_id`) REFERENCES `empleado` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -168,7 +168,7 @@ CREATE TABLE `equipo` (
 
 LOCK TABLES `equipo` WRITE;
 /*!40000 ALTER TABLE `equipo` DISABLE KEYS */;
-INSERT INTO `equipo` VALUES (1,'Laptop','HP','Pavilion dv4','CHSY647',7500,'2','i5','Cualquier cosa','1',NULL,'2016-07-06','2016-07-02',1,1,'2016-07-16');
+INSERT INTO `equipo` VALUES (2,'Laptop','Lenovo','Pavilion dv4','GSTYYTABSJSD',12321,'4','i7','Ninguna','1',NULL,'2016-07-04','2016-07-01',NULL,2,'2016-07-06');
 /*!40000 ALTER TABLE `equipo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -193,7 +193,7 @@ CREATE TABLE `impresora` (
   `fecha_compra` datetime NOT NULL,
   `fecha_ultimo_mantenimiento` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -202,7 +202,7 @@ CREATE TABLE `impresora` (
 
 LOCK TABLES `impresora` WRITE;
 /*!40000 ALTER TABLE `impresora` DISABLE KEYS */;
-INSERT INTO `impresora` VALUES (1,'Lexmark','Lexmark','LXM100','GSTYYTABSJ','7500','Cualquier cosa','7','Inyección de Tinta','2016-07-08 00:00:00','2016-06-28 00:00:00','2016-07-08 00:00:00'),(2,'Lexmark2','Lexmark','LXM100','GSTYYTABSJSD','7500','Nunguna','1','Inyección de Tinta','2016-07-04 00:00:00','2016-07-01 00:00:00','0000-00-00 00:00:00');
+INSERT INTO `impresora` VALUES (1,'Lexmark','Lexmark','LXM100','GSTYYTABSJSD','7500','','1','Inyección de Tinta','2016-07-04 00:00:00','2016-07-01 00:00:00','2016-07-06 00:00:00');
 /*!40000 ALTER TABLE `impresora` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -217,17 +217,20 @@ CREATE TABLE `mantenimiento` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(45) NOT NULL,
   `estatus` varchar(45) NOT NULL COMMENT 'define el tipo de mantenimiento que se efectuo\n\n1.- Preventivo\n2.- Correctivo',
-  `fecha_mantenimiento` datetime NOT NULL,
+  `fecha_mantenimiento` date NOT NULL,
   `descripcion` text COMMENT 'se coloca el motivo o que fue lo que se le hizo de mantenimiento',
   `impresora_id` int(11) DEFAULT NULL,
   `Equipo_id` int(11) DEFAULT NULL,
   `tipo_mantenimiento` int(11) DEFAULT NULL COMMENT '1 Correctivo\n2 Preventivo',
+  `accesorio_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_mantenimiento_impresora1_idx` (`impresora_id`),
   KEY `fk_mantenimiento_Equipo1_idx` (`Equipo_id`),
-  CONSTRAINT `fk_mantenimiento_Equipo1` FOREIGN KEY (`Equipo_id`) REFERENCES `equipo` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  KEY `fk_mantenimiento_accesorio_idx` (`accesorio_id`),
+  CONSTRAINT `fk_mantenimiento_Equipo1` FOREIGN KEY (`Equipo_id`) REFERENCES `equipo` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fk_mantenimiento_accesorio` FOREIGN KEY (`accesorio_id`) REFERENCES `accesorio` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_mantenimiento_impresora1` FOREIGN KEY (`impresora_id`) REFERENCES `impresora` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -236,6 +239,7 @@ CREATE TABLE `mantenimiento` (
 
 LOCK TABLES `mantenimiento` WRITE;
 /*!40000 ALTER TABLE `mantenimiento` DISABLE KEYS */;
+INSERT INTO `mantenimiento` VALUES (1,'Primer mantenimiento','2','2016-07-08','Ninguno',NULL,2,NULL,NULL);
 /*!40000 ALTER TABLE `mantenimiento` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -263,7 +267,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'christian1350@hotmail.com','$2y$10$kD9/0UQIOphwTw5g3GbHRunTmcsrF061rigp3R5XZEePi33U2ZxjO','2016-07-02 14:43:18','2016-07-04 03:49:55','C5H8X8558RBoKtBh6PP2q4BXzSELXHwwKTCNO7Ph4uXZ5RWuOTFsK0IbPdy9');
+INSERT INTO `usuarios` VALUES (1,'christian1350@hotmail.com','$2y$10$kD9/0UQIOphwTw5g3GbHRunTmcsrF061rigp3R5XZEePi33U2ZxjO','2016-07-02 14:43:18','2016-07-08 23:06:06','6vj3vQSeH19Ma4qcUKswbBC5UkqBOnQh9KIocbcbo8jWifopOXn692FCoYUl');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -276,4 +280,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-07-04  9:04:59
+-- Dump completed on 2016-07-08 18:12:45
