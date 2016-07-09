@@ -20,8 +20,7 @@ class EquipoComputoController extends Controller
     }
     public function create()
     {
-    	$empleados = Empleado::orderBy('nombre')->get();
-    	return view('admin.alta_equipo', compact('empleados'));
+    	return view('admin.alta_equipo', ['empleados'=>Empleado::orderBy('nombre')->get()]);
     }
     public function store(Request $request)
     {
@@ -52,7 +51,6 @@ class EquipoComputoController extends Controller
     }
     public function destroy(Request $request)
     {
-        //$accesorios = \DB::table('accesorio')->where('equipo_id', '=', $request->id)->get();
         $accesorios = Accesorio::where('equipo_id', '=', $request->id)->get();
         if(count($accesorios) > 0) {
             foreach($accesorios as $accesorio) {
