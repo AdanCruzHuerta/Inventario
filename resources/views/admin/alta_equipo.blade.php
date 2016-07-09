@@ -35,15 +35,13 @@
 				</div>
 				<div class="col-md-3">
 					<label for="" class="control-label">Empleado responsable:</label>
-					<div class="input-group">
 						<select class="form-control" name="Empleado_id" required>
 						  <option value="">-nombre del empleado-</option>
 						  @foreach($empleados as $empleado)
 						  <option value="{{$empleado->id}}">{{$empleado->nombre}}</option>
 						  @endforeach
 						</select>
-						<span class="input-group-addon">+</span>
-					</div>	
+							
 				</div>
 			</div><br>
 
@@ -63,7 +61,7 @@
 				<div class="col-md-3">
 				<label for="" class="control-label">Memoria RAM:</label>
 					<div class="input-group">
-						<input type="number" class="form-control" placeholder="2" name="memoria">
+						<input type="number" class="form-control" placeholder="Ej.2" name="memoria">
 						<span class="input-group-addon">GB</span>
 					</div>
 				</div>
@@ -89,7 +87,7 @@
 				</div>
 				<div class="col-md-3">
 					<label for="" class="control-label">Nº de serie CPU:</label>
-					<input type="text" class="form-control" name="serie">
+					<input type="text" class="form-control" name="serie" placeholder="Ej: J66651A9J146851A">
 				</div>
 				
 			</div><br>
@@ -104,17 +102,18 @@
 					<input type="date" class="form-control" name="fecha_instalacion">
 				</div>
 				<div class="col-md-3">
-					<label for="" class="control-label">Fecha de ultimo mantenimiento</label>
-					<input type="date" class="form-control" name="fecha_ultimo_mantenimiento">
+					<label for="" class="control-label">Precio:</label>
+					<div class="input-group">
+					<span class="input-group-addon">$</span>
+						<input type="text" class="form-control" name="precio" placeholder="Ej: 3540" required />
+						
+					</div>
 				</div>
+				
 			</div><br>
 
 			<div class="row">
-				<div class="col-md-3">
-					<label for="" class="control-label">Precio:</label>
-					<input type="text" class="form-control" name="precio" placeholder="Ej: 3540" required />
-				</div>
-				<div class="col-md-6">
+				<div class="col-md-9">
 					<label for="" class="control-label">Caracteristicas adicionales</label>
 					<textarea class="form-control" rows="5" placeholder="Ej: Computadora Semi-nueva color negra con algunos tallones en la base del CPU" name="caracteristica"></textarea>
 				</div>

@@ -65,23 +65,27 @@
 							</div>
 						</div>
 						<div class="row filas">
-							<div class="col-md-6">
+							<div class="col-md-4">
 								<label for="" class="control-label">Fecha de compra</label>
 								<input type="date" class="form-control" name="fecha_compra" required>
 							</div>
-							<div class="col-md-6">
+							<div class="col-md-4">
 								<label for="" class="control-label">Fecha de asignación</label>
 								<input type="date" class="form-control" name="fecha_asignacion">
 							</div>
+							<div class="col-md-4">
+								<label for="">Precio</label>
+								<div class="input-group">
+									<span class="input-group-addon">$</span>
+									<input type="text" name="precio" class="form-control" required placeholder="Ej. 200">
+								</div>
+							</div>
 						</div>
 						<div class="row filas">
-							<div class="col-md-6">
-								<label for="">Precio</label>
-								<input type="text" name="precio" class="form-control" required placeholder="Ej. 200">
-							</div>
-							<div class="col-md-6">
+							
+							<div class="col-md-12">
 								<label for="" class="control-label">Caracteristicas adicionales</label>
-								<textarea class="form-control" rows="2" placeholder="Ej: Computadora Semi-nueva color negra con algunos tallones en la base del CPU" name="caracteristica"></textarea>
+								<textarea class="form-control" rows="5" placeholder="Ej: Computadora Semi-nueva color negra con algunos tallones en la base del CPU" name="caracteristica"></textarea>
 							</div>
 						</div>
 						<div class="row filas">
