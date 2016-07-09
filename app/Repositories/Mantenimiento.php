@@ -4,8 +4,6 @@
 */
 namespace App\Repositories;
 
-use App\Mantenimiento;
-
 class Mantenimiento
 {
 	static function getMantenimientosEquipo($id)

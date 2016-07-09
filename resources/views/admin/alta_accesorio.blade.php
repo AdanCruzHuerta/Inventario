@@ -23,11 +23,11 @@
 								<select class="form-control" name="estatus" required>
 								   	<option value="">-estatus-</option>
 								  	<option value="1">Asignado</option>
-								  	<option value="2">No funciona</option>
+								  	{{-- <option value="2">No funciona</option>
 								  	<option value="3">Partes</option>
 								  	<option value="5">En garantia</option>
 								  	<option value="4">En reparación</option>
-								  	<option value="6">Baja</option>
+								  	<option value="6">Baja</option> --}}
 								  	<option value="7">Almacenada</option>
 								</select>
 							</div>

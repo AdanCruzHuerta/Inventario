@@ -6,7 +6,7 @@
 		<h2 class="pull-left titulos">Registrar equipo de computo</h2>
 	</div>
 </div>
-<div class="row">
+<div id="app" class="row">
 	<div class="col-xs-12">
 		 @if(session()->has('success'))
             <div class="alert alert-success">Genial!. El equipo fue creado correctamente.</div>
@@ -22,19 +22,21 @@
 				</div>
 				<div class="col-md-3">
 				<label for="" class="control-label">Estatus</label>
-					<select class="form-control" name="estatus">
-					   	<option value="#">-estatus-</option>
+					<select class="form-control" name="estatus" v-model="estatus">
+					   	<option value="">-estatus-</option>
 					  	<option value="1">Asignado</option>
-					  	<option value="2">No funciona</option>
+					  	{{--<option value="2">No funciona</option>
 					  	<option value="3">Partes</option>
 					  	<option value="5">En garantia</option>
 					  	<option value="4">En reparación</option>
-					  	<option value="6">Baja</option>
+					  	<option value="6">Baja</option>--}}
 					  	<option value="7">Almacenada</option>
 					</select>
 				</div>
 				<div class="col-md-3">
 					<label for="" class="control-label">Empleado responsable:</label>
+					<div class="input-group">
+						<select class="form-control" name="Empleado_id" required v-bind:disabled="validaEmpleado">
 						<select class="form-control" name="Empleado_id" required>
 						  <option value="">-nombre del empleado-</option>
 						  @foreach($empleados as $empleado)
@@ -119,13 +121,42 @@
 				</div>
 			</div> <br>
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-9">
 					<a href="/administrador" class="btn btn-default">Regresar</a>
-					<input type="submit" value="Registrar" class="btn  btn-primary col-md-offset-8">
+					<input type="submit" value="Registrar" class="btn  btn-primary pull-right">
 				</div>
 			</div>
 		</form>
 	</div>	
 </div>
-
+@stop
+@section('scripts')
+<script>
+	new Vue({
+		el: "#app",
+		data: {
+			estatus: "",
+			empleado: false
+		},
+		watch: {
+			estatus: function(value){
+				this.validaEstatus(value)
+			}
+		},
+		computed: {
+			validaEmpleado: function() {
+				return this.empleado;
+			}
+		},
+		methods: {
+			validaEstatus: function(value) {
+				if(value == 7) {
+					this.empleado = true;
+				} else {
+					this.empleado = false;
+				}
+			}
+		}
+	})
+</script>
 @stop

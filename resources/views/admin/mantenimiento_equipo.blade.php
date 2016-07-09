@@ -89,7 +89,7 @@
 		watch: {
 		    equipo: function(value) {
 		    	this.get_mantenimientos_equipo(value);
-		    }
+		    } 
 		},
 		methods: {
 			get_mantenimientos_equipo: function(value) {

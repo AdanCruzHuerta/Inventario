@@ -10,7 +10,7 @@
            <div class="modal-body">
              <div class="form-group">
                <label for="recipient-name" class="control-label">Nombre</label>
-                <input type="text" class="form-control" name="nombre">
+                <input type="text" class="form-control" name="nombre" required>
              </div>
            </div>
             <div class="modal-footer">
