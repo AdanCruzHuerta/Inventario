@@ -89,18 +89,19 @@
 				<input type="date" class="form-control" value="{{ explode(" ", $equipo->fecha_instalacion)[0] }}">
 			</div>
 			<div class="col-md-3">
-				<label for="" class="control-label">Fecha de ultimo mantenimiento</label>
-				<input type="date" class="form-control" value="{{ explode(" ", $equipo->fecha_ultimo_mantenimiento)[0] }}">
+				<label for="" class="control-label">Precio:</label>
+				<div class="input-group">
+					<span class="input-group-addon">$</span>
+					<input type="text" class="form-control" value="{{$equipo->precio}}" />
+				</div>
 			</div>
+			
 		</div><br>
 		<div class="row">
-			<div class="col-md-3">
-				<label for="" class="control-label">Precio:</label>
-				<input type="text" class="form-control" value="{{$equipo->precio}}" />
-			</div>
-			<div class="col-md-6">
+			
+			<div class="col-md-9">
 				<label for="" class="control-label">Caracteristicas adicionales</label>
-				<textarea class="form-control" rows="2">{{$equipo->caracteristica}}</textarea>
+				<textarea class="form-control" rows="5">{{$equipo->caracteristica}}</textarea>
 			</div>
 		</div> <br>
 		<div class="row">
