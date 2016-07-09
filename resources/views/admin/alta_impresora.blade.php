@@ -61,7 +61,7 @@
 							</div>
 							<div class="col-md-6">
 								<label for="" class="control-label">Precio</label>
-								<input class="form-control" type="text" name="precio" required placeholder="Ej: 1240">
+								<input class="form-control" type="text" name="precio" required placeholder="No usar comas para los miles">
 							</div>
 						</div>
 						<div class="row filas">
@@ -74,18 +74,14 @@
 								<input type="date" class="form-control" name="fecha_instalacion">
 							</div>
 							<div class="col-md-4">
-								<label for="" class="control-label">Fecha de ultimo Manten.</label>
-								<input type="date" class="form-control" name="fecha_ultimo_mantenimiento">
-							</div>
-						</div>
-						<div class="row filas">
-							<div class="col-md-6">
 								<label for="" class="control-label">Nº de serie Impresora</label>
 								<input type="text" class="form-control" placeholder="Ej: J66651A9J146851A" name="serie">
 							</div>
-							<div class="col-md-6">
+						</div>
+						<div class="row filas">
+							<div class="col-md-12">
 								<label for="" class="control-label">Caracteristicas adicionales</label>
-								<textarea class="form-control" rows="2" placeholder="Ej: Computadora Semi-nueva color negra con algunos tallones en la base del CPU" name="caracteristica"></textarea>
+								<textarea class="form-control" rows="5" placeholder="Ej: Computadora Semi-nueva color negra con algunos tallones en la base del CPU" name="caracteristica"></textarea>
 							</div>
 						</div>
 						<div class="row">
