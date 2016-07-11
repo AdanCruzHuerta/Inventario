@@ -1,13 +1,11 @@
 @extends('layouts.admin')
 @section('content')
-<<<<<<< HEAD
 <style>
 	.campo_opciones{
 		width: 100px;
 	}
 </style>
 <div id="app" class="row">
-	<h2 class="titulos">Historial de Mantenimientos de Impresoras</h2>
 	<div class="row">
 		<div class="col-xs-12">
 			<h2 class="titulos">Historial de Mantenimientos de Impresoras</h2>		
@@ -42,7 +40,7 @@
 				<tbody>
 					<tr v-for="mantenimiento in mantenimientos">
 						<td>@{{mantenimiento.nombre}}</td>
-						<td>@{{mantenimiento.fecha_mantenimiento}}</td>
+						<td>@{{mantenimiento.fecha_mantenimiento.split("-").reverse().join("-")}}</td>
 						<td v-if="mantenimiento.estatus == 1">@{{'Preventivo'}}</td>
 						<td v-else>@{{'Correctivo'}}</td>
 						<td>@{{mantenimiento.descripcion}}</td>

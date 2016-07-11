@@ -49,7 +49,14 @@
                         {{ 'Almacenada' }}
                         @endif
                     </td>
-                    <td>{{$impresora->fecha_mantenimiento or '-'}}</td>
+                    <?php 
+                        $fecha = explode("-", $impresora->fecha_mantenimiento);
+                    ?>
+                    @if(count($fecha) > 0)
+                        <td>{{ $fecha[2]."-".$fecha[1]."-".$fecha[0] }}</td>
+                    @else
+                         <td>{{'-'}}</td>
+                    @endif
                     <td>
                         <div class="row">
                             <div class="col-md-3">
