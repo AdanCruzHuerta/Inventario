@@ -3,7 +3,7 @@
 <style>.filas{margin-top: 20px;}</style>
 <div class="row">
   <div class="col-xs-12">
-    <h2 class="pull-left titulos">Registrar Mantenimiento de Equipo de Computo</h2>
+    <h2 class="pull-left titulos">Registrar Mantenimiento de Impresora</h2>
   </div>
 </div>
 <div class="row">
@@ -20,7 +20,7 @@
             <div class="row filas">
               <div class="col-md-6">
                 <label for="" class="control-label" >Nombre (manteniento)</label>
-                <input type="text" class="form-control" placeholder="Ej: Impresora-Ventas" name="nombre" required>
+                <input type="text" class="form-control" placeholder="Ej: Reparación de impresora" name="nombre" required>
               </div>
               <div class="col-md-6">
                 <label for="" class="control-label">Estatus</label>
@@ -49,7 +49,7 @@
             <div class="row filas">
               <div class="col-xs-12">
                 <label for="" class="control-label">Descripción de mantenimiento</label>
-                <textarea class="form-control" rows="2" placeholder="Ej: Formateo y limpieza de equipo de computo" name="descripcion"></textarea>
+                <textarea class="form-control" rows="2" placeholder="Ej: Limpieza de la impresora" name="descripcion"></textarea>
               </div>
             </div>
             <div class="row filas">

@@ -1,5 +1,10 @@
 @extends('layouts.admin')
 @section('content')
+	<style>
+		.campo_opciones{
+			width: 100px;
+		}
+	</style>
 	<div id="app">
 		<div class="row">
 			<div class="col-xs-12">
@@ -39,7 +44,7 @@
 							<td v-if="mantenimiento.estatus == 1">@{{'Preventivo'}}</td>
 							<td v-else>@{{'Correctivo'}}</td>
 							<td>@{{mantenimiento.descripcion}}</td>
-							<td>
+							<td class="campo_opciones">
 								<a href="/administrador/mantenimiento_accesorio/editar/@{{mantenimiento.id}}" class="btn btn-info"><i class="fa fa-pencil" aria-hidden="true"></i></a>
 								<button class="btn btn-danger" v-on:click="deleteMantenimiento(mantenimiento.id)" data-toggle="modal" data-target="#myModal"><i class="fa fa-trash" aria-hidden="true"></i></button>
 							</td>
