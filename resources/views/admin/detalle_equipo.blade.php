@@ -3,7 +3,7 @@
 @section('content')
 <div class="row">
 	<div class="col-xs-12">
-		<h2 class="pull-left titulos">Registrar equipo de computo</h2>
+		<h2 class="pull-left titulos">Registrar Equipo de Computo</h2>
 		@if(session()->has('success'))
             <div class="alert alert-success">Genial!. El equipo fue creado correctamente.</div>
         @elseif(session()->has('error'))
@@ -85,7 +85,7 @@
 				<input type="date" class="form-control" value="{{ explode(" ", $equipo->fecha_compra)[0] }}">
 			</div>
 			<div class="col-md-3">
-				<label for="" class="control-label">Fecha de instalacion</label>
+				<label for="" class="control-label">Fecha de instalación</label>
 				<input type="date" class="form-control" value="{{ explode(" ", $equipo->fecha_instalacion)[0] }}">
 			</div>
 			<div class="col-md-3">
@@ -100,13 +100,13 @@
 		<div class="row">
 			
 			<div class="col-md-9">
-				<label for="" class="control-label">Caracteristicas adicionales</label>
+				<label for="" class="control-label">Características adicionales</label>
 				<textarea class="form-control" rows="5">{{$equipo->caracteristica}}</textarea>
 			</div>
 		</div> <br>
 		<div class="row">
 			<div class="col-md-12">
-				<a href="/administrador" class="btn btn-default">Regresar</a>
+				<a href="/administrador" class="btn btn-warning">Regresar</a>
 			</div>
 		</div>
 	</div>

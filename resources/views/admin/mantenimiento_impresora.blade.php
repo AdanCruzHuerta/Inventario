@@ -1,22 +1,25 @@
 @extends('layouts.admin')
 @section('content')
-<div id="app" class="row">
-	<h2 class="titulos">Historial de Mantenimientos de Impresoras</h2>
+<div id="app">
 	<div class="row">
-		<div class="col-md-3">
-			<label for="">Selecciona la impresora</label>
-			<select class="form-control" name="impresora_id" v-model="impresora">
-            	<option value="">-Impresora-</option>
-            	@foreach($impresoras as $impresora)
-            	<option value="{{$impresora->id}}">{{$impresora->nombre}}</option>
-            	@endforeach
-            </select>
+		<div class="col-xs-12">
+			<h2 class="titulos">Historial de Mantenimientos de Impresoras</h2>		
 		</div>
-		<div class="table-responsive col-md-3">
-        	<br><a class="btn btn-info col-md-offset-4" href="/administrador/mantenimiento_impresora/alta_mantenimiento_impresora">Nuevo Mantenimiento</a>
-    	</div>
 	</div>
-	<br>
+	<div class="row">
+			<div class="col-md-3">
+				<label for="">Selecciona la impresora</label>
+				<select class="form-control" name="impresora_id" v-model="impresora">
+	            	<option value="">-Impresora-</option>
+	            	@foreach($impresoras as $impresora)
+	            	<option value="{{$impresora->id}}">{{$impresora->nombre}}</option>
+	            	@endforeach
+	            </select>
+			</div>
+			<div class="table-responsive col-md-3">
+	        	<br><a class="btn btn-info col-md-offset-2" href="/administrador/mantenimiento_impresora/alta_mantenimiento_impresora"">Nuevo Mantenimiento</a>
+	    	</div>
+		</div> <br>
 	<div class="row">
 		<div class="col-md-10">
 			<table class="table table-striped" v-if="!mensaje">
@@ -44,7 +47,7 @@
 				</tbody>
 			</table>
 			<div class="alert alert-info" v-if="mensaje">
-				<center>Actualmente no presenta ningun mantenimiento.</center>
+				<center>Actualmente no presenta ningún mantenimiento.</center>
 			</div>
 		</div>
 	</div>
@@ -63,7 +66,7 @@
 		                  <input type="hidden" name="id" v-bind:value="delete_mantenimiento">
 		                </div>
 		                <div class="modal-footer">
-		                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
 		                  <button type="submit" class="btn btn-danger">Borrar</button>
 		                </div>
 		            </form>

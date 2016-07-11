@@ -13,7 +13,7 @@
                   <input type="hidden" name="id" id="id_departamento_delete">
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
                   <button type="submit" class="btn btn-danger">Borrar</button>
                 </div>
             </form>

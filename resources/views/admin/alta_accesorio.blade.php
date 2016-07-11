@@ -84,13 +84,13 @@
 						<div class="row filas">
 							
 							<div class="col-md-12">
-								<label for="" class="control-label">Caracteristicas adicionales</label>
-								<textarea class="form-control" rows="5" placeholder="Ej: Computadora Semi-nueva color negra con algunos tallones en la base del CPU" name="caracteristica"></textarea>
+								<label for="" class="control-label">Características adicionales</label>
+								<textarea class="form-control" rows="5" placeholder="Ej: Teclado Inalambrico color gris" name="caracteristica"></textarea>
 							</div>
 						</div>
 						<div class="row filas">
 							<div class="col-xs-12">
-								<a href="/administrador/accesorio" class="btn btn-default">Regresar</a>
+								<a href="/administrador/accesorio" class="btn btn-warning">Regresar</a>
 								<input type="submit" class="btn btn-primary pull-right" value="Registrar">
 							</div>
 						</div>

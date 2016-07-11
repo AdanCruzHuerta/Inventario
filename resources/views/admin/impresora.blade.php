@@ -80,7 +80,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Borrar impresora</h4>
+              <h4 class="modal-title">Borrar Impresora</h4>
             </div>
             <div class="modal-body">
               <p>¿Esta seguro de querer borrar el registro de la impresora?</p>
@@ -88,7 +88,7 @@
               <input type="hidden" name="id" id="id_impresora">
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
               <button type="submit" class="btn btn-danger">Borrar</button>
             </div>
           </div>

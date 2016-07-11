@@ -72,14 +72,14 @@
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Borrar equipo de computo</h4>
+              <h4 class="modal-title">Borrar Equipo de Computo</h4>
             </div>
             <div class="modal-body">
               <p>¿Esta seguro de querer borrar el registro del equipo de computo?</p>
               <input type="hidden" name="id" id="id_equipo">
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
               <button type="submit" class="btn btn-danger">Borrar</button>
             </div>
           </div>

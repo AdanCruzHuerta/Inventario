@@ -2,7 +2,7 @@
 @section('content')
 	<style>.list-group-item{padding-bottom: 20px;}</style>
 	<div class="row">
-	    <div class="col-md-12"><h2 class="titulos">Lista de departamentos</h2></div>
+	    <div class="col-md-12"><h2 class="titulos">Lista de Departamentos</h2></div>
 	</div>
 	<div class="row">
 	    <div class="table-responsive col-md-10">
@@ -22,7 +22,7 @@
 		        @else
 					<li class="list-group-item">
 						<i class="fa fa-info-circle" aria-hidden="true"></i>
-						No se ha registrado ningun departamento
+						No se ha registrado ningún departamento
 					</li>
 		        @endif
 	        </ul>
