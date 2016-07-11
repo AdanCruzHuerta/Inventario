@@ -20,7 +20,7 @@
           <div class="col-md-10">
             <div class="row filas">
               <div class="col-md-6">
-                <label for="" class="control-label" >Nombre (manteniento)</label>
+                <label for="" class="control-label" >Nombre (mantenimiento)</label>
                 <input type="text" class="form-control" placeholder="Ej: Impresora-Ventas" name="nombre" required value="{{$mantenimiento->nombre}}">
               </div>
               <div class="col-md-6">
@@ -55,7 +55,7 @@
             </div>
             <div class="row filas">
               <div class="col-xs-12">
-                <a href="/administrador/mantenimiento_impresora" class="btn btn-default">Regresar</a>
+                <a href="/administrador/mantenimiento_impresora" class="btn btn-warning">Regresar</a>
                 <input type="submit" class="btn btn-primary pull-right" value="Registrar">
               </div>
             </div>

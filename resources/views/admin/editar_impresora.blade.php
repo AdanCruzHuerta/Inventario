@@ -6,9 +6,9 @@
     <div class="col-md-12">
     	<h2 class="titulos">Editar Impresora</h2>
     	@if(session()->has('success'))
-	            <div class="alert alert-success">Genial!. El la impresora fue modificada correctamente.</div>
+	            <div class="alert alert-success">Genial!. La Impresora fue modificada correctamente.</div>
 	        @elseif(session()->has('error'))
-	            <div class="alert alert-danger">Error!. No se pudo modificar la impresora.</div>
+	            <div class="alert alert-danger">Error!. No se pudo modificar la Impresora.</div>
 	        @endif
 			<form action="/administrador/impresora/update" class="" method="POST">
 				{{ csrf_field() }}
@@ -27,7 +27,7 @@
 								  	<option @if($impresora->estatus == 1) {{'selected'}} @endif value="1">Asignada</option>
 								  	<option @if($impresora->estatus == 2) {{'selected'}} @endif value="2">No funciona</option>
 								  	<option @if($impresora->estatus == 3) {{'selected'}} @endif value="3">Partes</option>
-								  	<option @if($impresora->estatus == 5) {{'selected'}} @endif value="5">En garantia</option>
+								  	<option @if($impresora->estatus == 5) {{'selected'}} @endif value="5">En garantía</option>
 								  	<option @if($impresora->estatus == 4) {{'selected'}} @endif value="4">En reparación</option>
 								  	<option @if($impresora->estatus == 6) {{'selected'}} @endif value="6">Baja</option>
 								  	<option @if($impresora->estatus == 7) {{'selected'}} @endif value="7">Almacenada</option>
@@ -76,23 +76,25 @@
 								<input type="date" class="form-control" name="fecha_instalacion" value="{{explode(" ", $impresora->fecha_instalacion)[0]}}">
 							</div>
 							<div class="col-md-4">
-								<label for="" class="control-label">Fecha de ultimo Manten.</label>
-								<input type="date" class="form-control" name="fecha_ultimo_mantenimiento" value="{{explode(" ", $impresora->fecha_ultimo_mantenimiento)[0]}}">
-							</div>
-						</div>
-						<div class="row filas">
-							<div class="col-md-6">
 								<label for="" class="control-label">Nº de serie Impresora</label>
 								<input type="text" class="form-control" placeholder="Ej: J66651A9J146851A" name="serie" value="{{$impresora->serie}}">
 							</div>
-							<div class="col-md-6">
-								<label for="" class="control-label">Caracteristicas adicionales</label>
-								<textarea class="form-control" rows="2" placeholder="Ej: Computadora Semi-nueva color negra con algunos tallones en la base del CPU" name="caracteristica">{{$impresora->caracteristica}}</textarea>
+						</div>
+						<div class="row filas">
+							<div class="col-md-12">
+								<label for="" class="control-label">Características adicionales</label>
+								<textarea class="form-control" rows="5" placeholder="Ej: Computadora Semi-nueva color negra con algunos tallones en la base del CPU" name="caracteristica">{{$impresora->caracteristica}}</textarea>
 							</div>
 						</div>
-						<div class="row">
+					{{-- 	<div class="row">
 							<div class="col-xs-12">
 								<a href="/administrador/impresora" class="btn btn-default pull-left">Regresar</a>
+								<input type="submit" class="btn btn-primary pull-right" value="Actualizar">
+							</div>
+						</div> --}}
+						<div class="row filas">
+							<div class="col-xs-12">
+								<a href="/administrador/impresora" class="btn btn-warning">Regresar</a>
 								<input type="submit" class="btn btn-primary pull-right" value="Actualizar">
 							</div>
 						</div>

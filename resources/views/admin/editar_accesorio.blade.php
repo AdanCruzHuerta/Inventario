@@ -85,13 +85,13 @@
 								<input type="text" name="precio" class="form-control" required placeholder="Ej. 200" value="{{$accesorio->precio}}">
 							</div>
 							<div class="col-md-6">
-								<label for="" class="control-label">Caracteristicas adicionales</label>
+								<label for="" class="control-label">Características adicionales</label>
 								<textarea class="form-control" rows="2" placeholder="Ej: Computadora Semi-nueva color negra con algunos tallones en la base del CPU" name="caracteristica">{{$accesorio->caracteristica}}</textarea>
 							</div>
 						</div>
 						<div class="row filas">
 							<div class="col-xs-12">
-								<a href="/administrador/accesorio" class="btn btn-default">Regresar</a>
+								<a href="/administrador/accesorio" class="btn btn-warning">Regresar</a>
 								<input type="submit" class="btn btn-primary pull-right" value="Actualizar">
 							</div>
 						</div>

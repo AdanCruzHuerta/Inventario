@@ -3,7 +3,7 @@
 @section('content')
 <div class="row">
 	<div class="col-xs-12">
-		<h2 class="pull-left titulos">Registrar equipo de computo</h2>
+		<h2 class="pull-left titulos">Registrar Equipo de Computo</h2>
 	</div>
 </div>
 <div class="row">
@@ -100,28 +100,28 @@
 					<input type="date" class="form-control" name="fecha_compra" value="{{ explode(" ", $equipo->fecha_compra)[0] }}">
 				</div>
 				<div class="col-md-3">
-					<label for="" class="control-label">Fecha de instalacion</label>
+					<label for="" class="control-label">Fecha de instalación</label>
 					<input type="date" class="form-control" name="fecha_instalacion" value="{{ explode(" ", $equipo->fecha_instalacion)[0] }}">
 				</div>
 				<div class="col-md-3">
-					<label for="" class="control-label">Fecha de ultimo mantenimiento</label>
-					<input type="date" class="form-control" name="fecha_ultimo_mantenimiento" value="{{ explode(" ", $equipo->fecha_instalacion)[0] }}">
+					<label for="" class="control-label">Precio:</label>
+					<div class="input-group">
+						<span class="input-group-addon">$</span>
+						<input type="text" class="form-control" name="precio" placeholder="Ej: 3540" required value="{{$equipo->precio}}"/>
+					</div>
 				</div>
 			</div><br>
 
 			<div class="row">
-				<div class="col-md-3">
-					<label for="" class="control-label">Precio:</label>
-					<input type="text" class="form-control" name="precio" placeholder="Ej: 3540" required value="{{$equipo->precio}}"/>
-				</div>
-				<div class="col-md-6">
-					<label for="" class="control-label">Caracteristicas adicionales</label>
-					<textarea class="form-control" rows="2" placeholder="Ej: Computadora Semi-nueva color negra con algunos tallones en la base del CPU" name="caracteristica">{{$equipo->caracteristica}}</textarea>
+				
+				<div class="col-md-9">
+					<label for="" class="control-label">Características adicionales</label>
+					<textarea class="form-control" rows="5" placeholder="Ej: Computadora Semi-nueva color negra con algunos tallones en la base del CPU" name="caracteristica">{{$equipo->caracteristica}}</textarea>
 				</div>
 			</div> <br>
 			<div class="row">
 				<div class="col-md-12">
-					<a href="/administrador" class="btn btn-default">Regresar</a>
+					<a href="/administrador" class="btn btn-warning">Regresar</a>
 					<input type="submit" value="Registrar" class="btn  btn-primary col-md-offset-8">
 				</div>
 			</div>

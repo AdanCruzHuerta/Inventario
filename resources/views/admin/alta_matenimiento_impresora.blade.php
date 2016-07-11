@@ -49,12 +49,12 @@
             <div class="row filas">
               <div class="col-xs-12">
                 <label for="" class="control-label">Descripción de mantenimiento</label>
-                <textarea class="form-control" rows="2" placeholder="Ej: Limpieza de la impresora" name="descripcion"></textarea>
+                <textarea class="form-control" rows="5" placeholder="Ej: Cambio de tinta y limpieza general" name="descripcion"></textarea>
               </div>
             </div>
             <div class="row filas">
               <div class="col-xs-12">
-                <a href="/administrador/mantenimiento_impresora" class="btn btn-default">Regresar</a>
+                <a href="/administrador/mantenimiento_impresora" class="btn btn-warning">Regresar</a>
                 <input type="submit" class="btn btn-primary pull-right" value="Registrar">
               </div>
             </div>

@@ -52,7 +52,7 @@
 					</tbody>
 				</table>
 				<div class="alert alert-info" v-if="mensaje">
-					<center>Actualmente no presenta ningun mantenimiento.</center>
+					<center>Actualmente no presenta ningún mantenimiento.</center>
 				</div>
 			</div>
 		</div>
@@ -71,7 +71,7 @@
 		                  <input type="hidden" name="id" v-bind:value="delete_mantenimiento">
 		                </div>
 		                <div class="modal-footer">
-		                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
 		                  <button type="submit" class="btn btn-danger">Borrar</button>
 		                </div>
 		            </form>

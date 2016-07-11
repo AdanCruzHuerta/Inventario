@@ -3,7 +3,7 @@
 @section('content')
 <div class="row">
 	<div class="col-xs-12">
-		<h2 class="pull-left titulos">Registrar equipo de computo</h2>
+		<h2 class="pull-left titulos">Registrar Equipo de Computo</h2>
 	</div>
 </div>
 <div id="app" class="row">
@@ -35,15 +35,12 @@
 				</div>
 				<div class="col-md-3">
 					<label for="" class="control-label">Empleado responsable:</label>
-					<div class="input-group">
 						<select class="form-control" name="Empleado_id" required v-bind:disabled="validaEmpleado">
-						<select class="form-control" name="Empleado_id" required>
 						  <option value="">-nombre del empleado-</option>
 						  @foreach($empleados as $empleado)
 						  <option value="{{$empleado->id}}">{{$empleado->nombre}}</option>
 						  @endforeach
-						</select>
-							
+						</select>	
 				</div>
 			</div><br>
 
@@ -70,7 +67,7 @@
 				<div class="col-md-3">
 					<label for="" class="control-label">SAP Instalado:</label>
 					<select class="form-control" name="sap_instalado">
-						<option value="#">-Sap Instalado-</option>
+						<option value="#">-SAP Instalado-</option>
 						<option value="1">Si</option>
 						<option value="2">No</option>
 					</select>
@@ -85,7 +82,7 @@
 				</div>
 				<div class="col-md-3">
 					<label for="" class="control-label">Procesador:</label>
-					<input type="text" class="form-control" placeholder="Ej: Intel i3 tercera generación" name="procesador">
+					<input type="text" class="form-control" placeholder="Ej: Intel i3 a 2.3 GHZ" name="procesador">
 				</div>
 				<div class="col-md-3">
 					<label for="" class="control-label">Nº de serie CPU:</label>
@@ -100,7 +97,7 @@
 					<input type="date" class="form-control" name="fecha_compra">
 				</div>
 				<div class="col-md-3">
-					<label for="" class="control-label">Fecha de instalacion</label>
+					<label for="" class="control-label">Fecha de instalación</label>
 					<input type="date" class="form-control" name="fecha_instalacion">
 				</div>
 				<div class="col-md-3">
@@ -116,13 +113,14 @@
 
 			<div class="row">
 				<div class="col-md-9">
-					<label for="" class="control-label">Caracteristicas adicionales</label>
+					<label for="" class="control-label">Características adicionales</label>
 					<textarea class="form-control" rows="5" placeholder="Ej: Computadora Semi-nueva color negra con algunos tallones en la base del CPU" name="caracteristica"></textarea>
 				</div>
-			</div> <br>
+			</div><br>
+
 			<div class="row">
 				<div class="col-md-9">
-					<a href="/administrador" class="btn btn-default">Regresar</a>
+					<a href="/administrador" class="btn btn-warning">Regresar</a>
 					<input type="submit" value="Registrar" class="btn  btn-primary pull-right">
 				</div>
 			</div>

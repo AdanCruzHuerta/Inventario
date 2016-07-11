@@ -5,7 +5,7 @@
 		<div class="col-xs-12">
 			<h2 class="titulos">Registrar Impresora</h2>
 			@if(session()->has('success'))
-	            <div class="alert alert-success">Genial!. El la impresora fue registrada correctamente.</div>
+	            <div class="alert alert-success">Genial!. La impresora fue registrada correctamente.</div>
 	        @elseif(session()->has('error'))
 	            <div class="alert alert-danger">Error!. No se pudo registrar la impresora.</div>
 	        @endif
@@ -55,7 +55,7 @@
 								<label for="" class="control-label">Tipo</label>
 								<select class="form-control" name="tipo">
 									<option value="">-Tipo de impresora-</option>
-								  	<option value="Laser">Laser</option>
+								  	<option value="Laser">Láser</option>
 								  	<option value="Inyección de Tinta">Inyección de tinta</option>
 								</select>
 							</div>
@@ -80,13 +80,15 @@
 						</div>
 						<div class="row filas">
 							<div class="col-md-12">
-								<label for="" class="control-label">Caracteristicas adicionales</label>
-								<textarea class="form-control" rows="5" placeholder="Ej: Computadora Semi-nueva color negra con algunos tallones en la base del CPU" name="caracteristica"></textarea>
+								<label for="" class="control-label">Características adicionales</label>
+								<textarea class="form-control" rows="5" placeholder="Ej: Impresora con capacidad para 40 hojas de impresion por minuto color negra" name="caracteristica"></textarea>
 							</div>
 						</div>
-						<div class="row">
+						<div class="row filas">
 							<div class="col-xs-12">
+								<a href="/administrador/impresora" class="btn btn-warning">Regresar</a>
 								<input type="submit" class="btn btn-primary pull-right" value="Registrar">
+								
 							</div>
 						</div>
 					</div>

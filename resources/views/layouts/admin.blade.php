@@ -23,7 +23,7 @@
     <div id="wrapper">
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">               
-                <a class="navbar-brand" href="index.html">Control de equipo de computo</a>
+                <p class="navbar-brand">Control de Equipo de Computo</p>
 
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -49,14 +49,15 @@
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
-                        <li>
-                            <a href="/administrador/empleado"><i class="fa fa-users fa-fw"></i> Empleados</a>
-                        </li>
+                        
                         <li>
                             <a href="/administrador/departamento"><i class="fa fa-building fa-fw"></i> Departamentos</a>
                         </li>
                         <li>
-                            <a href="/administrador"><i class="fa fa-desktop fa-fw"></i> Equipos de computo</a>
+                            <a href="/administrador/empleado"><i class="fa fa-users fa-fw"></i> Empleados</a>
+                        </li>
+                        <li>
+                            <a href="/administrador"><i class="fa fa-desktop fa-fw"></i> Equipos de Computo</a>
                         </li>
                         <li>
                             <a href="/administrador/impresora"><i class="fa fa-print fa-fw"></i>Impresoras</a>
@@ -68,7 +69,7 @@
                             <a href="#"><i class="fa fa-wrench fa-fw"></i>Mantenimiento<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="/administrador/mantenimiento_equipo"><i class='fa fa-desktop fa-fw'></i> Equipo de computo</a>
+                                    <a href="/administrador/mantenimiento_equipo"><i class='fa fa-desktop fa-fw'></i> Equipo de Computo</a>
                                 </li>
                                 <li>
                                     <a href="/administrador/mantenimiento_impresora"><i class='fa fa-print fa-fw'></i> Impresoras</a>

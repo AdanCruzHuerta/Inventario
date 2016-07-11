@@ -19,8 +19,8 @@
 					<div class="col-md-10">
 						<div class="row filas">
 							<div class="col-md-6">
-								<label for="" class="control-label" >Nombre (manteniento)</label>
-								<input type="text" class="form-control" placeholder="Ej: Impresora-Ventas" name="nombre" required>
+								<label for="" class="control-label" >Nombre (mantenimiento)</label>
+								<input type="text" class="form-control" placeholder="Ej: Mantenimiento_PPC01" name="nombre" required>
 							</div>
 							<div class="col-md-6">
 								<label for="" class="control-label">Estatus</label>
@@ -49,12 +49,12 @@
 						<div class="row filas">
 							<div class="col-xs-12">
 								<label for="" class="control-label">Descripción de mantenimiento</label>
-								<textarea class="form-control" rows="2" placeholder="Ej: Formateo y limpieza de equipo de computo" name="descripcion"></textarea>
+								<textarea class="form-control" rows="5" placeholder="Ej: Formateo y limpieza de equipo de computo" name="descripcion"></textarea>
 							</div>
 						</div>
 						<div class="row filas">
 							<div class="col-xs-12">
-								<a href="/administrador/mantenimiento_equipo" class="btn btn-default">Regresar</a>
+								<a href="/administrador/mantenimiento_equipo" class="btn btn-warning">Regresar</a>
 								<input type="submit" class="btn btn-primary pull-right" value="Registrar">
 							</div>
 						</div>

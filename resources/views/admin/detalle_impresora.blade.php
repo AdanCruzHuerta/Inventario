@@ -8,7 +8,7 @@
 </style>
 <div class="row">
     <div class="col-md-12">
-    	<h2 class="titulos">Detalle de impresora</h2>
+    	<h2 class="titulos">Detalle de Impresora</h2>
 		<div class="row">
 			<div class="col-xs-12 col-md-8">
 				<div class="row filas">
@@ -90,23 +90,20 @@
 						<input type="text" class="form-control" value="{{explode(" ", $impresora->fecha_instalacion)[0] }}">
 					</div>
 					<div class="col-md-4">
-						<label for="" class="control-label">Fecha de ultimo Manten.</label>
-						<input type="text" class="form-control" value="{{explode(" ", $impresora->fecha_ultimo_mantenimiento)[0] }}">
-					</div>
-				</div>
-				<div class="row filas">
-					<div class="col-md-6">
 						<label for="" class="control-label">Nº de serie Impresora</label>
 						<input type="text" class="form-control" value="{{$impresora->serie}}">
 					</div>
-					<div class="col-md-6">
-						<label for="" class="control-label">Caracteristicas adicionales</label>
-						<textarea class="form-control" rows="2">{{$impresora->caracteristica}}</textarea>
+				</div>
+				<div class="row filas">
+					
+					<div class="col-md-12">
+						<label for="" class="control-label">Características adicionales</label>
+						<textarea class="form-control" rows="5">{{$impresora->caracteristica}}</textarea>
 					</div>
 				</div>
 				<div class="row filas">
 					<div class="col-xs-12">
-						<a href="/administrador/impresora" class="btn btn-default">Regresar</a>
+						<a href="/administrador/impresora" class="btn btn-warning">Regresar</a>
 					</div>
 				</div>
 			</div>
