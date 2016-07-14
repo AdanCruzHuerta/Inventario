@@ -98,8 +98,11 @@
 			
 		</div><br>
 		<div class="row">
-			
-			<div class="col-md-9">
+			<div class="col-md-3">
+				<label for="" class="control-label">Sistema Operativo</label>
+				<input type="text" class="form-control" name="sistema_operativo" placeholder="Ej. windows 7 Ultimate Service Pack 1" required />
+			</div>
+			<div class="col-md-6">
 				<label for="" class="control-label">Características adicionales</label>
 				<textarea class="form-control" rows="5">{{$equipo->caracteristica}}</textarea>
 			</div>
