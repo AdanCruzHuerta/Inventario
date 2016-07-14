@@ -40,14 +40,30 @@
 						<div class="row filas">
 							<div class="col-md-6">
 								<label for="" class="control-label">Marca</label>
-								<select class="form-control" name="marca">
-									<option @if($accesorio->marca == "") {{'selected'}} @endif value="">-marca-</option>
-									<option @if($accesorio->marca == "Logitech") {{'selected'}} @endif value="Logitech">Logitech</option>
-									<option @if($accesorio->marca == "HP") {{'selected'}} @endif value="HP">HP</option>
-									<option @if($accesorio->marca == "Acteck") {{'selected'}} @endif value="Acteck">Acteck</option>
-									<option @if($accesorio->marca == "Vorago") {{'selected'}} @endif value="Vorago">Vorago</option>
-									<option @if($accesorio->marca == "Dell") {{'selected'}} @endif value="Dell">Dell</option>
-								</select>
+							{{-- 	<select class="form-control" name="marca">
+							  	  <option @if($accesorio->marca == '') {{ 'selected' }} @endif value="">-marca-</option>
+							  	  <optgroup label="Equipo de computo">
+								  <option @if($accesorio->marca == 'Dell') {{ 'selected' }} @endif value="Dell">Dell</option>
+								  <option @if($accesorio->marca == 'HP') {{ 'selected' }} @endif value="HP">HP</option>
+								  <option @if($accesorio->marca == 'Lanix') {{ 'selected' }} @endif value="Lanix">Lanix</option>
+								  <option @if($accesorio->marca == 'Acer') {{ 'selected' }} @endif value="Acer">Acer</option>
+								  <option @if($accesorio->marca == 'Lenovo') {{ 'selected' }} @endif value="Lenovo">Lenovo</option>
+								  <option @if($accesorio->marca == 'Sony') {{ 'selected' }} @endif value="Sony">Sony</option>
+								  <option @if($accesorio->marca == 'BenQ') {{ 'selected' }} @endif value="BenQ">BenQ</option>
+								  <option @if($accesorio->marca == 'Getaway') {{ 'selected' }} @endif value="Getaway">Getaway</option>
+								  <option @if($accesorio->marca == 'e-machine') {{ 'selected' }} @endif value="e-machine">e-machine</option>
+								  <optgroup label="Impresoras">
+								  <option @if($accesorio->marca == 'Lexmark') {{ 'selected' }} @endif value="Lexmark">Lexmark</option>
+								  <option @if($accesorio->marca == 'Brother') {{ 'selected' }} @endif value="Brother">Brother</option>
+								  <option @if($accesorio->marca == 'Xerox') {{ 'selected' }} @endif value="Xerox">Xerox</option>
+								  <option @if($accesorio->marca == 'Kyocera') {{ 'selected' }} @endif value="Kyocera">Kyocera</option>
+								  <optgroup label="Accesorios">
+								  <option @if($accesorio->marca == 'Logitech') {{ 'selected' }} @endif value="Logitech">Logitech</option>
+								  <option @if($accesorio->marca == 'Acteck') {{ 'selected' }} @endif value="Acteck">Acteck</option>
+								  <option @if($accesorio->marca == 'Vorago') {{ 'selected' }} @endif value="Vorago">Vorago</option>
+								  <option @if($accesorio->marca == 'Genius') {{ 'selected' }} @endif value="Genius">Genius</option>
+								  <option @if($accesorio->marca == 'Ecline') {{ 'selected' }} @endif value="Ecline">Ecline</option>
+							</select> --}}
 							</div>
 							<div class="col-md-6">
 								<label for="" class="control-label">Modelo</label>

@@ -39,7 +39,8 @@
 		<div class="row">
 			<div class="col-md-3">
 				<label for="" class="control-label">Marca</label>
-				<select class="form-control">
+				{{-- <select class="form-control">
+				<optgroup label="Equipo de computo">
 				  <option @if($equipo->marca == '') {{ 'selected' }} @endif value="">-marca-</option>
 				  <option @if($equipo->marca == 'Dell') {{ 'selected' }} @endif value="Dell">Dell</option>
 				  <option @if($equipo->marca == 'HP') {{ 'selected' }} @endif value="HP">HP</option>
@@ -47,7 +48,22 @@
 				  <option @if($equipo->marca == 'Acer') {{ 'selected' }} @endif value="Acer">Acer</option>
 				  <option @if($equipo->marca == 'Lenovo') {{ 'selected' }} @endif value="Lenovo">Lenovo</option>
 				  <option @if($equipo->marca == 'Sony') {{ 'selected' }} @endif value="Sony">Sony</option>
-				</select>
+				  <option @if($equipo->marca == 'BenQ') {{ 'selected' }} @endif value="BenQ">BenQ</option>
+				  <option @if($equipo->marca == 'Getaway') {{ 'selected' }} @endif value="Getaway">Getaway</option>
+				  <option @if($equipo->marca == 'e-machine') {{ 'selected' }} @endif value="e-machine">e-machine</option>
+				  <optgroup label="Impresoras">
+				  <option @if($equipo->marca == 'Epson') {{ 'selected' }} @endif value="Epson">Epson</option>
+				  <option @if($equipo->marca == 'Lexmark') {{ 'selected' }} @endif value="Lexmark">Lexmark</option>
+				  <option @if($equipo->marca == 'Brother') {{ 'selected' }} @endif value="Brother">Brother</option>
+				  <option @if($equipo->marca == 'Xerox') {{ 'selected' }} @endif value="Xerox">Xerox</option>
+				  <option @if($equipo->marca == 'Kyocera') {{ 'selected' }} @endif value="Kyocera">Kyocera</option>
+				  <optgroup label="Accesorios">
+				  <option @if($equipo->marca == 'Logitech') {{ 'selected' }} @endif value="Logitech">Logitech</option>
+				  <option @if($equipo->marca == 'Acteck') {{ 'selected' }} @endif value="Acteck">Acteck</option>
+				  <option @if($equipo->marca == 'Vorago') {{ 'selected' }} @endif value="Vorago">Vorago</option>
+				  <option @if($equipo->marca == 'Genius') {{ 'selected' }} @endif value="Genius">Genius</option>
+				  <option @if($equipo->marca == 'Ecline') {{ 'selected' }} @endif value="Ecline">Ecline</option>
+				</select> --}}
 			</div>
 			<div class="col-md-3">
 			<label for="" class="control-label">Memoria RAM:</label>

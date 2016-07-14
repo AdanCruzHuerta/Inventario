@@ -38,14 +38,29 @@
 							<div class="col-md-6">
 								<label for="" class="control-label">Marca</label>
 								<select class="form-control" name="marca">
-									<option @if($impresora->marca == "") {{'selected'}} @endif value="">-marca-</option>
-									<option @if($impresora->marca == "Epson") {{'selected'}} @endif value="Epson">Epson</option>
-									<option @if($impresora->marca == "HP") {{'selected'}} @endif value="HP">HP</option>
-									<option @if($impresora->marca == "Lexmark") {{'selected'}} @endif value="Lexmark">Lexmark</option>
-									<option @if($impresora->marca == "Brother") {{'selected'}} @endif value="Brother">Brother</option>
-									<option @if($impresora->marca == "Xerox") {{'selected'}} @endif value="Xerox">Xerox</option>
-									<option @if($impresora->marca == "Epson") {{'selected'}} @endif value="Kyocera">Kyocera</option>
-								</select>
+							  	  <option @if($impresora->marca == '') {{ 'selected' }} @endif value="">-marca-</option>
+							  	  <optgroup label="Equipo de computo">
+								  <option @if($impresora->marca == 'Dell') {{ 'selected' }} @endif value="Dell">Dell</option>
+								  <option @if($impresora->marca == 'HP') {{ 'selected' }} @endif value="HP">HP</option>
+								  <option @if($impresora->marca == 'Lanix') {{ 'selected' }} @endif value="Lanix">Lanix</option>
+								  <option @if($impresora->marca == 'Acer') {{ 'selected' }} @endif value="Acer">Acer</option>
+								  <option @if($impresora->marca == 'Lenovo') {{ 'selected' }} @endif value="Lenovo">Lenovo</option>
+								  <option @if($impresora->marca == 'Sony') {{ 'selected' }} @endif value="Sony">Sony</option>
+								  <option @if($impresora->marca == 'BenQ') {{ 'selected' }} @endif value="BenQ">BenQ</option>
+								  <option @if($impresora->marca == 'Getaway') {{ 'selected' }} @endif value="Getaway">Getaway</option>
+								  <option @if($impresora->marca == 'e-machine') {{ 'selected' }} @endif value="e-machine">e-machine</option>
+								  <optgroup label="Impresoras">
+								  <option @if($impresora->marca == 'Lexmark') {{ 'selected' }} @endif value="Lexmark">Lexmark</option>
+								  <option @if($impresora->marca == 'Brother') {{ 'selected' }} @endif value="Brother">Brother</option>
+								  <option @if($impresora->marca == 'Xerox') {{ 'selected' }} @endif value="Xerox">Xerox</option>
+								  <option @if($impresora->marca == 'Kyocera') {{ 'selected' }} @endif value="Kyocera">Kyocera</option>
+								  <optgroup label="Accesorios">
+								  <option @if($impresora->marca == 'Logitech') {{ 'selected' }} @endif value="Logitech">Logitech</option>
+								  <option @if($impresora->marca == 'Acteck') {{ 'selected' }} @endif value="Acteck">Acteck</option>
+								  <option @if($impresora->marca == 'Vorago') {{ 'selected' }} @endif value="Vorago">Vorago</option>
+								  <option @if($impresora->marca == 'Genius') {{ 'selected' }} @endif value="Genius">Genius</option>
+								  <option @if($impresora->marca == 'Ecline') {{ 'selected' }} @endif value="Ecline">Ecline</option>
+							</select>
 							</div>
 							<div class="col-md-6">
 								<label for="" class="control-label">Modelo</label>
@@ -57,8 +72,11 @@
 								<label for="" class="control-label">Tipo</label>
 								<select class="form-control" name="tipo">
 									<option @if($impresora->tipo == "") {{'selected'}} @endif value="">-Tipo de impresora-</option>
-								  	<option @if($impresora->tipo == "Laser") {{'selected'}} @endif value="Laser">Laser</option>
+								  	<option @if($impresora->tipo == "Laser") {{'selected'}} @endif value="Laser">Láser</option>
 								  	<option @if($impresora->tipo == "Inyección de Tinta") {{'selected'}} @endif value="Inyección de Tinta">Inyección de tinta</option>
+								  	<option @if($impresora->tipo == "Termica") {{'selected'}} @endif value="Termica">Térmica</option>
+								  	<option @if($impresora->tipo == "Etiquetas") {{'selected'}} @endif value="Etiquetas">Etiquetas</option>
+								  	<option @if($impresora->tipo == "Credenciales") {{'selected'}} @endif value="Credenciales">Credenciales</option>
 								</select>
 							</div>
 							<div class="col-md-6">

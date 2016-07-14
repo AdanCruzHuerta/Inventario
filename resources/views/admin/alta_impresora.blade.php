@@ -79,7 +79,10 @@
 								<select class="form-control" name="tipo">
 									<option value="">-Tipo de impresora-</option>
 								  	<option value="Laser">Láser</option>
-								  	<option value="Inyección de Tinta">Inyección de tinta</option>
+								  	<option value="Inyección de Tinta">Inyección de tinta</option> 
+								  	<option value="Termica">Térmica</option>
+								  	<option value="Etiquetas">Etiquetas</option>
+								  	<option value="Credenciales">Credenciales</option>
 								</select>
 							</div>
 							<div class="col-md-6">

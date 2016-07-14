@@ -6,6 +6,14 @@ get('/', function () {
 post('/login', 'LoginController@store');
 get('/logout', 'LoginController@logout');
 
+//codigo para crear un usuario
+get('/nuevo', function(){
+    $usuario = App\User::create([
+        'email'     => 'christian1350@hotmail.com',
+        'password'  => \Hash::make('12345')
+    ]);
+    return $usuario;
+});
 // Grupo de rutas del Administrador
 Route::group(['middleware' => 'administrador'], function () {
     // Módulo "Equiṕo de computo"
