@@ -36,12 +36,36 @@
 							<div class="col-md-6">
 								<label for="" class="control-label">Marca</label>
 								<select class="form-control" name="marca">
-									<option value="">-marca-</option>
-									<option value="Logitech">Logitech</option>
-									<option value="HP">HP</option>
-									<option value="Acteck">Acteck</option>
-									<option value="Vorago">Vorago</option>
-									<option value="Dell">Dell</option>
+									<option value="#">-marca-</option>
+									<optgroup label="Equipo de computo">
+									  	<option value="Dell">Dell</option>
+									  	<option value="HP">HP</option>
+									  	<option value="Lanix">Lanix</option>
+									  	<option value="Acer">Acer</option>
+									  	<option value="Lenovo">Lenovo</option>
+									  	<option value="Sony">Sony</option>
+									  {{-- Hasta aqui habia marcas --}}
+									 	<option value="BenQ">BenQ</option>
+									 	<option value="Getaway">Getaway</option>
+									 	<option value="Compaq">Compaq</option>
+									 	<option value="Samsung">Samsung</option>
+									 	<option value="Toshiba">Toshiba</option>
+									 	<option value="LG">LG</option>
+									 	<option value="GHIA">GHIA</option>
+									 	<option value="Getaway">Getaway</option>
+									 	<option value="e-machine">e-machine</option>
+									<optgroup label="Impresoras">
+									  	<option value="Epson">Epson</option>
+									  	<option value="Lexmark">Lexmark</option>
+									  	<option value="Brother">Brother</option>
+									  	<option value="Xerox">Xerox</option>
+									  	<option value="Kyocera">Kyocera</option>
+									<optgroup label="Accesorios">
+										<option value="Logitech">Logitech</option>
+										<option value="Acteck">Acteck</option>
+										<option value="Vorago">Vorago</option>
+										<option value="Genius">Genius</option>
+										<option value="Ecline">Ecline</option>
 								</select>
 							</div>
 							<div class="col-md-6">
