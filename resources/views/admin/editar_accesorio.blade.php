@@ -90,7 +90,7 @@
 						<div class="row filas">
 							<div class="col-md-6">
 								<label for="" class="control-label">Fecha de compra</label>
-								<input type="date" class="form-control" name="fecha_compra" required value="{{$accesorio->fecha_compra}}">
+								<input type="date" class="form-control" name="fecha_compra"  value="{{$accesorio->fecha_compra}}">
 							</div>
 							<div class="col-md-6">
 								<label for="" class="control-label">Fecha de asignación</label>
