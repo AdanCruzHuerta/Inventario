@@ -79,7 +79,7 @@
 							<option value="Acteck">Acteck</option>
 							<option value="Vorago">Vorago</option>
 							<option value="Genius">Genius</option>
-							<option value="Ecline">Ecline</option>
+							<option value="ISB">ISB Sola Basic</option>
 					</select>
 				</div>
 				<div class="col-md-3">

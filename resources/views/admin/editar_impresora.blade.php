@@ -61,7 +61,7 @@
 								  <option @if($impresora->marca == 'Acteck') {{ 'selected' }} @endif value="Acteck">Acteck</option>
 								  <option @if($impresora->marca == 'Vorago') {{ 'selected' }} @endif value="Vorago">Vorago</option>
 								  <option @if($impresora->marca == 'Genius') {{ 'selected' }} @endif value="Genius">Genius</option>
-								  <option @if($impresora->marca == 'Ecline') {{ 'selected' }} @endif value="Ecline">Ecline</option>
+								  <option @if($impresora->marca == 'ISB') {{ 'selected' }} @endif value="ISB">ISB Sola Basic</option>
 							</select>
 							</div>
 							<div class="col-md-6">
