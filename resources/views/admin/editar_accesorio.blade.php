@@ -40,7 +40,7 @@
 						<div class="row filas">
 							<div class="col-md-6">
 								<label for="" class="control-label">Marca</label>
-							{{-- 	<select class="form-control" name="marca">
+								<select class="form-control" name="marca">
 							  	  <option @if($accesorio->marca == '') {{ 'selected' }} @endif value="">-marca-</option>
 							  	  <optgroup label="Equipo de computo">
 								  <option @if($accesorio->marca == 'Dell') {{ 'selected' }} @endif value="Dell">Dell</option>
@@ -57,13 +57,15 @@
 								  <option @if($accesorio->marca == 'Brother') {{ 'selected' }} @endif value="Brother">Brother</option>
 								  <option @if($accesorio->marca == 'Xerox') {{ 'selected' }} @endif value="Xerox">Xerox</option>
 								  <option @if($accesorio->marca == 'Kyocera') {{ 'selected' }} @endif value="Kyocera">Kyocera</option>
+								  <option @if($accesorio->marca == 'Zebra') {{ 'selected' }} @endif value="Zebra">Zebra</option>
+								  <option @if($accesorio->marca == 'EC-LINE') {{ 'selected' }} @endif value="EC-LINE">EC-LINE</option>
 								  <optgroup label="Accesorios">
 								  <option @if($accesorio->marca == 'Logitech') {{ 'selected' }} @endif value="Logitech">Logitech</option>
 								  <option @if($accesorio->marca == 'Acteck') {{ 'selected' }} @endif value="Acteck">Acteck</option>
 								  <option @if($accesorio->marca == 'Vorago') {{ 'selected' }} @endif value="Vorago">Vorago</option>
 								  <option @if($accesorio->marca == 'Genius') {{ 'selected' }} @endif value="Genius">Genius</option>
 								  <option @if($accesorio->marca == 'Ecline') {{ 'selected' }} @endif value="Ecline">Ecline</option>
-							</select> --}}
+							</select>
 							</div>
 							<div class="col-md-6">
 								<label for="" class="control-label">Modelo</label>

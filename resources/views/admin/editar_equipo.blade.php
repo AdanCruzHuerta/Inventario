@@ -68,6 +68,8 @@
 						  <option @if($equipo->marca == 'Brother') {{ 'selected' }} @endif value="Brother">Brother</option>
 						  <option @if($equipo->marca == 'Xerox') {{ 'selected' }} @endif value="Xerox">Xerox</option>
 						  <option @if($equipo->marca == 'Kyocera') {{ 'selected' }} @endif value="Kyocera">Kyocera</option>
+						  <option @if($equipo->marca == 'Zebra') {{ 'selected' }} @endif value="Zebra">Zebra</option>
+						  <option @if($equipo->marca == 'EC-LINE') {{ 'selected' }} @endif value="EC-LINE">EC-LINE</option>
 						  <optgroup label="Accesorios">
 						  <option @if($equipo->marca == 'Logitech') {{ 'selected' }} @endif value="Logitech">Logitech</option>
 						  <option @if($equipo->marca == 'Acteck') {{ 'selected' }} @endif value="Acteck">Acteck</option>

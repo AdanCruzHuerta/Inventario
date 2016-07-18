@@ -54,6 +54,8 @@
 								  <option @if($impresora->marca == 'Brother') {{ 'selected' }} @endif value="Brother">Brother</option>
 								  <option @if($impresora->marca == 'Xerox') {{ 'selected' }} @endif value="Xerox">Xerox</option>
 								  <option @if($impresora->marca == 'Kyocera') {{ 'selected' }} @endif value="Kyocera">Kyocera</option>
+								  <option @if($impresora->marca == 'Zebra') {{ 'selected' }} @endif value="Zebra">Zebra</option>
+								  <option @if($impresora->marca == 'EC-LINE') {{ 'selected' }} @endif value="EC-LINE">EC-LINE</option>
 								  <optgroup label="Accesorios">
 								  <option @if($impresora->marca == 'Logitech') {{ 'selected' }} @endif value="Logitech">Logitech</option>
 								  <option @if($impresora->marca == 'Acteck') {{ 'selected' }} @endif value="Acteck">Acteck</option>

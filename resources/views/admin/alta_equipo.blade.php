@@ -72,6 +72,8 @@
 						  	<option value="Brother">Brother</option>
 						  	<option value="Xerox">Xerox</option>
 						  	<option value="Kyocera">Kyocera</option>
+						  	<option value="Zebra">Zebra</option>
+							<option value="EC-LINE">EC-LINE</option>
 						<optgroup label="Accesorios">
 							<option value="Logitech">Logitech</option>
 							<option value="Acteck">Acteck</option>

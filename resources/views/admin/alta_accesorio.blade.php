@@ -60,6 +60,8 @@
 									  	<option value="Brother">Brother</option>
 									  	<option value="Xerox">Xerox</option>
 									  	<option value="Kyocera">Kyocera</option>
+									  	<option value="Zebra">Zebra</option>
+									  	<option value="EC-LINE">EC-LINE</option>
 									<optgroup label="Accesorios">
 										<option value="Logitech">Logitech</option>
 										<option value="Acteck">Acteck</option>
@@ -91,7 +93,7 @@
 						<div class="row filas">
 							<div class="col-md-4">
 								<label for="" class="control-label">Fecha de compra</label>
-								<input type="date" class="form-control" name="fecha_compra" required>
+								<input type="date" class="form-control" name="fecha_compra">
 							</div>
 							<div class="col-md-4">
 								<label for="" class="control-label">Fecha de asignación</label>
