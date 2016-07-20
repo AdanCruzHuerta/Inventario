@@ -52,7 +52,6 @@
 										 	<option value="Toshiba">Toshiba</option>
 										 	<option value="LG">LG</option>
 										 	<option value="GHIA">GHIA</option>
-										 	<option value="Getaway">Getaway</option>
 										 	<option value="e-machine">e-machine</option>
 										<optgroup label="Impresoras">
 										  	<option value="Epson">Epson</option>
@@ -68,6 +67,8 @@
 											<option value="Vorago">Vorago</option>
 											<option value="Genius">Genius</option>
 											<option value="ISB">ISB Sola Basic</option>
+											<option value="Green Leaf">Green Leaf</option>
+											<option value="View Sonic">View Sonic</option>
 								</select>
 							</div>
 							<div class="col-md-6">
@@ -85,6 +86,7 @@
 								  	<option value="Termica">Térmica</option>
 								  	<option value="Etiquetas">Etiquetas</option>
 								  	<option value="Credenciales">Credenciales</option>
+								  	<option value="Multifuncional">Multifuncional</option>
 								</select>
 							</div>
 							<div class="col-md-6">

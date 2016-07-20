@@ -48,6 +48,11 @@
 								  <option @if($impresora->marca == 'Sony') {{ 'selected' }} @endif value="Sony">Sony</option>
 								  <option @if($impresora->marca == 'BenQ') {{ 'selected' }} @endif value="BenQ">BenQ</option>
 								  <option @if($impresora->marca == 'Getaway') {{ 'selected' }} @endif value="Getaway">Getaway</option>
+								  <option @if($impresora->marca == 'Compaq') {{ 'selected' }} @endif value="Compaq">Compaq</option>
+								  <option @if($impresora->marca == 'Samsung') {{ 'selected' }} @endif value="Samsung">Samsung</option>
+								  <option @if($impresora->marca == 'Toshiba') {{ 'selected' }} @endif value="Toshiba">Toshiba</option>
+								  <option @if($impresora->marca == 'LG') {{ 'selected' }} @endif value="LG">LG</option>
+								  <option @if($impresora->marca == 'GHIA') {{ 'selected' }} @endif value="GHIA">GHIA</option>
 								  <option @if($impresora->marca == 'e-machine') {{ 'selected' }} @endif value="e-machine">e-machine</option>
 								  <optgroup label="Impresoras">
 								  <option @if($impresora->marca == 'Lexmark') {{ 'selected' }} @endif value="Lexmark">Lexmark</option>
@@ -62,6 +67,8 @@
 								  <option @if($impresora->marca == 'Vorago') {{ 'selected' }} @endif value="Vorago">Vorago</option>
 								  <option @if($impresora->marca == 'Genius') {{ 'selected' }} @endif value="Genius">Genius</option>
 								  <option @if($impresora->marca == 'ISB') {{ 'selected' }} @endif value="ISB">ISB Sola Basic</option>
+								  <option @if($impresora->marca == 'Green Leaf') {{ 'selected' }} @endif value="Green Leaf">Green Leaf</option>
+								  <option @if($impresora->marca == 'View Sonic') {{ 'selected' }} @endif value="View Sonic">View Sonic</option>
 							</select>
 							</div>
 							<div class="col-md-6">
@@ -79,6 +86,7 @@
 								  	<option @if($impresora->tipo == "Termica") {{'selected'}} @endif value="Termica">Térmica</option>
 								  	<option @if($impresora->tipo == "Etiquetas") {{'selected'}} @endif value="Etiquetas">Etiquetas</option>
 								  	<option @if($impresora->tipo == "Credenciales") {{'selected'}} @endif value="Credenciales">Credenciales</option>
+								  	<option @if($impresora->tipo == "Multifuncional") {{'selected'}} @endif value="Multifuncional">Multifuncional</option>
 								</select>
 							</div>
 							<div class="col-md-6">

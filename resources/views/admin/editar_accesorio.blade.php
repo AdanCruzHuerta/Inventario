@@ -51,6 +51,11 @@
 								  <option @if($accesorio->marca == 'Sony') {{ 'selected' }} @endif value="Sony">Sony</option>
 								  <option @if($accesorio->marca == 'BenQ') {{ 'selected' }} @endif value="BenQ">BenQ</option>
 								  <option @if($accesorio->marca == 'Getaway') {{ 'selected' }} @endif value="Getaway">Getaway</option>
+								  <option @if($accesorio->marca == 'Compaq') {{ 'selected' }} @endif value="Compaq">Compaq</option>
+								  <option @if($accesorio->marca == 'Samsung') {{ 'selected' }} @endif value="Samsung">Samsung</option>
+								  <option @if($accesorio->marca == 'Toshiba') {{ 'selected' }} @endif value="Toshiba">Toshiba</option>
+								  <option @if($accesorio->marca == 'LG') {{ 'selected' }} @endif value="LG">LG</option>
+								  <option @if($accesorio->marca == 'GHIA') {{ 'selected' }} @endif value="GHIA">GHIA</option>
 								  <option @if($accesorio->marca == 'e-machine') {{ 'selected' }} @endif value="e-machine">e-machine</option>
 								  <optgroup label="Impresoras">
 								  <option @if($accesorio->marca == 'Lexmark') {{ 'selected' }} @endif value="Lexmark">Lexmark</option>
@@ -65,6 +70,8 @@
 								  <option @if($accesorio->marca == 'Vorago') {{ 'selected' }} @endif value="Vorago">Vorago</option>
 								  <option @if($accesorio->marca == 'Genius') {{ 'selected' }} @endif value="Genius">Genius</option>
 								  <option @if($accesorio->marca == 'ISB') {{ 'selected' }} @endif value="ISB">ISB Sola Basic</option>
+								  <option @if($accesorio->marca == 'Green Leaf') {{ 'selected' }} @endif value="Green Leaf">Green Leaf</option>
+								  <option @if($accesorio->marca == 'View Sonic') {{ 'selected' }} @endif value="View Sonic">View Sonic</option>
 							</select>
 							</div>
 							<div class="col-md-6">

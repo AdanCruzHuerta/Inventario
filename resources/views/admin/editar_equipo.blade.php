@@ -62,6 +62,11 @@
 						  <option @if($equipo->marca == 'Sony') {{ 'selected' }} @endif value="Sony">Sony</option>
 						  <option @if($equipo->marca == 'BenQ') {{ 'selected' }} @endif value="BenQ">BenQ</option>
 						  <option @if($equipo->marca == 'Getaway') {{ 'selected' }} @endif value="Getaway">Getaway</option>
+						  <option @if($equipo->marca == 'Compaq') {{ 'selected' }} @endif value="Compaq">Compaq</option>
+						  <option @if($equipo->marca == 'Samsung') {{ 'selected' }} @endif value="Samsung">Samsung</option>
+						  <option @if($equipo->marca == 'Toshiba') {{ 'selected' }} @endif value="Toshiba">Toshiba</option>
+						  <option @if($equipo->marca == 'LG') {{ 'selected' }} @endif value="LG">LG</option>
+						  <option @if($equipo->marca == 'GHIA') {{ 'selected' }} @endif value="GHIA">GHIA</option>
 						  <option @if($equipo->marca == 'e-machine') {{ 'selected' }} @endif value="e-machine">e-machine</option>
 						  <optgroup label="Impresoras">
 						  <option @if($equipo->marca == 'Lexmark') {{ 'selected' }} @endif value="Lexmark">Lexmark</option>
@@ -76,6 +81,8 @@
 						  <option @if($equipo->marca == 'Vorago') {{ 'selected' }} @endif value="Vorago">Vorago</option>
 						  <option @if($equipo->marca == 'Genius') {{ 'selected' }} @endif value="Genius">Genius</option>
 						  <option @if($equipo->marca == 'ISB') {{ 'selected' }} @endif value="ISB">ISB Sola Basic</option>
+						  <option @if($equipo->marca == 'Green Leaf') {{ 'selected' }} @endif value="Green Leaf">Green Leaf</option>
+						  <option @if($equipo->marca == 'View Sonic') {{ 'selected' }} @endif value="View Sonic">View Sonic</option>
 					</select>
 				</div>
 				<div class="col-md-3">
@@ -132,7 +139,7 @@
 			<div class="row">
 				<div class="col-md-3">
 					<label for="" class="control-label">Sistema Operativo</label>
-					<input type="text" class="form-control" name="sistema_operativo" placeholder="Ej. windows 7 Ultimate Service Pack 1" required />
+					<input type="text" class="form-control" name="sistema_operativo" placeholder="Ej. windows 7 Ultimate Service Pack 1" required value="{{$equipo->sistema_operativo}}"/>
 				</div>
 				<div class="col-md-6">
 					<label for="" class="control-label">Características adicionales</label>
