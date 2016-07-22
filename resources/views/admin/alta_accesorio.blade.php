@@ -70,6 +70,7 @@
 										<option value="ISB">ISB Sola Basic</option>
 										<option value="Green Leaf">Green Leaf</option>
 										<option value="View Sonic">View Sonic</option>
+										<option value="Hanns-G">Hanns-G</option>
 								</select>
 							</div>
 							<div class="col-md-6">
