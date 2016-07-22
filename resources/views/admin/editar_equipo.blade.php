@@ -85,6 +85,7 @@
 						  <option @if($equipo->marca == 'View Sonic') {{ 'selected' }} @endif value="View Sonic">View Sonic</option>
 						  <option @if($equipo->marca == 'Hanns-G') {{ 'selected' }} @endif value="Hanns-G">Hanns-G</option>
 						  <option @if($equipo->marca == 'Microstar') {{ 'selected' }} @endif value="Microstar">Microstar</option>
+						  <option @if($equipo->marca == 'Steren') {{ 'selected' }} @endif value="Steren">Steren</option>
 					</select>
 				</div>
 				<div class="col-md-3">

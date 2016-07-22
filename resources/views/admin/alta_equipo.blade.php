@@ -83,6 +83,7 @@
 							<option value="View Sonic">View Sonic</option>
 							<option value="Hanns-G">Hanns-G</option>
 							<option value="Microstar">Microstar</option>
+							<option value="Steren">Steren</option>
 					</select>
 				</div>
 				<div class="col-md-3">

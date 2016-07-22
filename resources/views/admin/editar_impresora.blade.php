@@ -71,6 +71,7 @@
 								  <option @if($impresora->marca == 'View Sonic') {{ 'selected' }} @endif value="View Sonic">View Sonic</option>
 								  <option @if($impresora->marca == 'Hanns-G') {{ 'selected' }} @endif value="Hanns-G">Hanns-G</option>
 								  <option @if($impresora->marca == 'Microstar') {{ 'selected' }} @endif value="Microstar">Microstar</option>
+								  <option @if($impresora->marca == 'Steren') {{ 'selected' }} @endif value="Steren">Steren</option>
 							</select>
 							</div>
 							<div class="col-md-6">
