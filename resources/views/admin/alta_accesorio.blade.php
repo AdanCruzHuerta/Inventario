@@ -71,6 +71,7 @@
 										<option value="Green Leaf">Green Leaf</option>
 										<option value="View Sonic">View Sonic</option>
 										<option value="Hanns-G">Hanns-G</option>
+										<option value="Microstar">Microstar</option>
 								</select>
 							</div>
 							<div class="col-md-6">
