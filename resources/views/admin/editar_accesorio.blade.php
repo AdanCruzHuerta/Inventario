@@ -57,6 +57,7 @@
 								  <option @if($accesorio->marca == 'LG') {{ 'selected' }} @endif value="LG">LG</option>
 								  <option @if($accesorio->marca == 'GHIA') {{ 'selected' }} @endif value="GHIA">GHIA</option>
 								  <option @if($accesorio->marca == 'e-machine') {{ 'selected' }} @endif value="e-machine">e-machine</option>
+								  <option @if($accesorio->marca == 'Asus') {{ 'selected' }} @endif value="Asus">Asus</option>
 								  <optgroup label="Impresoras">
 								  <option @if($accesorio->marca == 'Lexmark') {{ 'selected' }} @endif value="Lexmark">Lexmark</option>
 								  <option @if($accesorio->marca == 'Brother') {{ 'selected' }} @endif value="Brother">Brother</option>

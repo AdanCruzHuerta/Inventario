@@ -65,6 +65,7 @@
 						 	<option value="LG">LG</option>
 						 	<option value="GHIA">GHIA</option>
 						 	<option value="e-machine">e-machine</option>
+						 	<option value="Asus">Asus</option>
 						<optgroup label="Impresoras">
 						  	<option value="Epson">Epson</option>
 						  	<option value="Lexmark">Lexmark</option>
