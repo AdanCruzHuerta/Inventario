@@ -73,6 +73,7 @@
 										<option value="Hanns-G">Hanns-G</option>
 										<option value="Microstar">Microstar</option>
 										<option value="Steren">Steren</option>
+										<option value="Practica">Practica</option>
 								</select>
 							</div>
 							<div class="col-md-6">

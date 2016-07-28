@@ -75,6 +75,7 @@
 								  <option @if($accesorio->marca == 'Hanns-G') {{ 'selected' }} @endif value="Hanns-G">Hanns-G</option>
 								  <option @if($accesorio->marca == 'Microstar') {{ 'selected' }} @endif value="Microstar">Microstar</option>
 								  <option @if($accesorio->marca == 'Steren') {{ 'selected' }} @endif value="Steren">Steren</option>
+								  <option @if($accesorio->marca == 'Practica') {{ 'selected' }} @endif value="Practica">Practica</option>
 
 							</select>
 							</div>
