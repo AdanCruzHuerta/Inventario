@@ -5,7 +5,7 @@
 		<div class="col-xs-12">
 			<h2 class="titulos">Registrar Accesorio</h2>
 			 @if(session()->has('success'))
-	            <div class="alert alert-success">Genial!. El equipo fue creado correctamente.</div>
+	            <div class="alert alert-success">Genial!. El Accesorio fue creado correctamente.</div>
 	        @elseif(session()->has('error'))
 	            <div class="alert alert-danger">Error!. No se pudo crear el equipo.</div>
 	        @endif
@@ -74,6 +74,7 @@
 										<option value="Microstar">Microstar</option>
 										<option value="Steren">Steren</option>
 										<option value="Practica">Practica</option>
+										<option value="Plantronics">Plantronics</option>
 								</select>
 							</div>
 							<div class="col-md-6">

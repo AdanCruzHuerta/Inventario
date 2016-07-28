@@ -85,6 +85,7 @@
 							<option value="Microstar">Microstar</option>
 							<option value="Steren">Steren</option>
 							<option value="Practica">Practica</option>
+							<option value="Plantronics">Plantronics</option>
 					</select>
 				</div>
 				<div class="col-md-3">
